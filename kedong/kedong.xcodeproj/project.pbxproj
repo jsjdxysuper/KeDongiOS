@@ -1,0 +1,504 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		18A879F11977C12500BCD647 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18A879F01977C12500BCD647 /* Foundation.framework */; };
+		18A879F31977C12500BCD647 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18A879F21977C12500BCD647 /* CoreGraphics.framework */; };
+		18A879F51977C12500BCD647 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18A879F41977C12500BCD647 /* UIKit.framework */; };
+		18A879FB1977C12500BCD647 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 18A879F91977C12500BCD647 /* InfoPlist.strings */; };
+		18A879FD1977C12500BCD647 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A879FC1977C12500BCD647 /* main.m */; };
+		18A87A011977C12500BCD647 /* KD3AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A87A001977C12500BCD647 /* KD3AppDelegate.m */; };
+		18A87A041977C12500BCD647 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18A87A021977C12500BCD647 /* Main.storyboard */; };
+		18A87A071977C12500BCD647 /* KD3ControlledCorporationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A87A061977C12500BCD647 /* KD3ControlledCorporationViewController.m */; };
+		18A87A0C1977C12500BCD647 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18A87A0B1977C12500BCD647 /* Images.xcassets */; };
+		18A87A131977C12500BCD647 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18A87A121977C12500BCD647 /* XCTest.framework */; };
+		18A87A141977C12500BCD647 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18A879F01977C12500BCD647 /* Foundation.framework */; };
+		18A87A151977C12500BCD647 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18A879F41977C12500BCD647 /* UIKit.framework */; };
+		18A87A1D1977C12500BCD647 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 18A87A1B1977C12500BCD647 /* InfoPlist.strings */; };
+		18A87A1F1977C12500BCD647 /* kedongTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A87A1E1977C12500BCD647 /* kedongTests.m */; };
+		18A87A2A1977C25A00BCD647 /* KD3PowerUnitViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A87A291977C25A00BCD647 /* KD3PowerUnitViewController.m */; };
+		18D3D1461978107100D337D0 /* LDProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D3D1431978107100D337D0 /* LDProgressView.m */; };
+		18D3D1471978107100D337D0 /* UIColor+RGBValues.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D3D1451978107100D337D0 /* UIColor+RGBValues.m */; };
+		18F8F83C1978A8E100C403D3 /* KD3PowerPlantController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18F8F83B1978A8E100C403D3 /* KD3PowerPlantController.m */; };
+		18F8F893197912C800C403D3 /* KD3CommonTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 18F8F892197912C800C403D3 /* KD3CommonTools.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		18A87A161977C12500BCD647 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 18A879E51977C12500BCD647 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 18A879EC1977C12500BCD647;
+			remoteInfo = kedong;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		18A879ED1977C12500BCD647 /* kedong.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = kedong.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		18A879F01977C12500BCD647 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		18A879F21977C12500BCD647 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		18A879F41977C12500BCD647 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		18A879F81977C12500BCD647 /* kedong-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "kedong-Info.plist"; sourceTree = "<group>"; };
+		18A879FA1977C12500BCD647 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		18A879FC1977C12500BCD647 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		18A879FE1977C12500BCD647 /* kedong-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "kedong-Prefix.pch"; sourceTree = "<group>"; };
+		18A879FF1977C12500BCD647 /* KD3AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KD3AppDelegate.h; sourceTree = "<group>"; };
+		18A87A001977C12500BCD647 /* KD3AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KD3AppDelegate.m; sourceTree = "<group>"; };
+		18A87A031977C12500BCD647 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		18A87A051977C12500BCD647 /* KD3ControlledCorporationViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KD3ControlledCorporationViewController.h; sourceTree = "<group>"; };
+		18A87A061977C12500BCD647 /* KD3ControlledCorporationViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KD3ControlledCorporationViewController.m; sourceTree = "<group>"; };
+		18A87A0B1977C12500BCD647 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		18A87A111977C12500BCD647 /* kedongTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = kedongTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		18A87A121977C12500BCD647 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		18A87A1A1977C12500BCD647 /* kedongTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "kedongTests-Info.plist"; sourceTree = "<group>"; };
+		18A87A1C1977C12500BCD647 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		18A87A1E1977C12500BCD647 /* kedongTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = kedongTests.m; sourceTree = "<group>"; };
+		18A87A281977C25A00BCD647 /* KD3PowerUnitViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KD3PowerUnitViewController.h; sourceTree = "<group>"; };
+		18A87A291977C25A00BCD647 /* KD3PowerUnitViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KD3PowerUnitViewController.m; sourceTree = "<group>"; };
+		18D3D1421978107100D337D0 /* LDProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LDProgressView.h; sourceTree = "<group>"; };
+		18D3D1431978107100D337D0 /* LDProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LDProgressView.m; sourceTree = "<group>"; };
+		18D3D1441978107100D337D0 /* UIColor+RGBValues.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+RGBValues.h"; sourceTree = "<group>"; };
+		18D3D1451978107100D337D0 /* UIColor+RGBValues.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+RGBValues.m"; sourceTree = "<group>"; };
+		18F8F83A1978A8E100C403D3 /* KD3PowerPlantController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KD3PowerPlantController.h; sourceTree = "<group>"; };
+		18F8F83B1978A8E100C403D3 /* KD3PowerPlantController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KD3PowerPlantController.m; sourceTree = "<group>"; };
+		18F8F891197912C800C403D3 /* KD3CommonTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KD3CommonTools.h; sourceTree = "<group>"; };
+		18F8F892197912C800C403D3 /* KD3CommonTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KD3CommonTools.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		18A879EA1977C12500BCD647 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				18A879F31977C12500BCD647 /* CoreGraphics.framework in Frameworks */,
+				18A879F51977C12500BCD647 /* UIKit.framework in Frameworks */,
+				18A879F11977C12500BCD647 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		18A87A0E1977C12500BCD647 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				18A87A131977C12500BCD647 /* XCTest.framework in Frameworks */,
+				18A87A151977C12500BCD647 /* UIKit.framework in Frameworks */,
+				18A87A141977C12500BCD647 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		18A879E41977C12500BCD647 = {
+			isa = PBXGroup;
+			children = (
+				18A879F61977C12500BCD647 /* kedong */,
+				18A87A181977C12500BCD647 /* kedongTests */,
+				18A879EF1977C12500BCD647 /* Frameworks */,
+				18A879EE1977C12500BCD647 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		18A879EE1977C12500BCD647 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				18A879ED1977C12500BCD647 /* kedong.app */,
+				18A87A111977C12500BCD647 /* kedongTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		18A879EF1977C12500BCD647 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				18A879F01977C12500BCD647 /* Foundation.framework */,
+				18A879F21977C12500BCD647 /* CoreGraphics.framework */,
+				18A879F41977C12500BCD647 /* UIKit.framework */,
+				18A87A121977C12500BCD647 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		18A879F61977C12500BCD647 /* kedong */ = {
+			isa = PBXGroup;
+			children = (
+				18F8F891197912C800C403D3 /* KD3CommonTools.h */,
+				18F8F892197912C800C403D3 /* KD3CommonTools.m */,
+				18D3D1421978107100D337D0 /* LDProgressView.h */,
+				18D3D1431978107100D337D0 /* LDProgressView.m */,
+				18D3D1441978107100D337D0 /* UIColor+RGBValues.h */,
+				18D3D1451978107100D337D0 /* UIColor+RGBValues.m */,
+				18A879FF1977C12500BCD647 /* KD3AppDelegate.h */,
+				18A87A001977C12500BCD647 /* KD3AppDelegate.m */,
+				18A87A021977C12500BCD647 /* Main.storyboard */,
+				18F8F83A1978A8E100C403D3 /* KD3PowerPlantController.h */,
+				18F8F83B1978A8E100C403D3 /* KD3PowerPlantController.m */,
+				18A87A281977C25A00BCD647 /* KD3PowerUnitViewController.h */,
+				18A87A291977C25A00BCD647 /* KD3PowerUnitViewController.m */,
+				18A87A051977C12500BCD647 /* KD3ControlledCorporationViewController.h */,
+				18A87A061977C12500BCD647 /* KD3ControlledCorporationViewController.m */,
+				18A87A0B1977C12500BCD647 /* Images.xcassets */,
+				18A879F71977C12500BCD647 /* Supporting Files */,
+			);
+			path = kedong;
+			sourceTree = "<group>";
+		};
+		18A879F71977C12500BCD647 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				18A879F81977C12500BCD647 /* kedong-Info.plist */,
+				18A879F91977C12500BCD647 /* InfoPlist.strings */,
+				18A879FC1977C12500BCD647 /* main.m */,
+				18A879FE1977C12500BCD647 /* kedong-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		18A87A181977C12500BCD647 /* kedongTests */ = {
+			isa = PBXGroup;
+			children = (
+				18A87A1E1977C12500BCD647 /* kedongTests.m */,
+				18A87A191977C12500BCD647 /* Supporting Files */,
+			);
+			path = kedongTests;
+			sourceTree = "<group>";
+		};
+		18A87A191977C12500BCD647 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				18A87A1A1977C12500BCD647 /* kedongTests-Info.plist */,
+				18A87A1B1977C12500BCD647 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		18A879EC1977C12500BCD647 /* kedong */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 18A87A221977C12500BCD647 /* Build configuration list for PBXNativeTarget "kedong" */;
+			buildPhases = (
+				18A879E91977C12500BCD647 /* Sources */,
+				18A879EA1977C12500BCD647 /* Frameworks */,
+				18A879EB1977C12500BCD647 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = kedong;
+			productName = kedong;
+			productReference = 18A879ED1977C12500BCD647 /* kedong.app */;
+			productType = "com.apple.product-type.application";
+		};
+		18A87A101977C12500BCD647 /* kedongTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 18A87A251977C12500BCD647 /* Build configuration list for PBXNativeTarget "kedongTests" */;
+			buildPhases = (
+				18A87A0D1977C12500BCD647 /* Sources */,
+				18A87A0E1977C12500BCD647 /* Frameworks */,
+				18A87A0F1977C12500BCD647 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				18A87A171977C12500BCD647 /* PBXTargetDependency */,
+			);
+			name = kedongTests;
+			productName = kedongTests;
+			productReference = 18A87A111977C12500BCD647 /* kedongTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		18A879E51977C12500BCD647 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = KD3;
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = "___FULLUSERNAME___";
+				TargetAttributes = {
+					18A87A101977C12500BCD647 = {
+						TestTargetID = 18A879EC1977C12500BCD647;
+					};
+				};
+			};
+			buildConfigurationList = 18A879E81977C12500BCD647 /* Build configuration list for PBXProject "kedong" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 18A879E41977C12500BCD647;
+			productRefGroup = 18A879EE1977C12500BCD647 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				18A879EC1977C12500BCD647 /* kedong */,
+				18A87A101977C12500BCD647 /* kedongTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		18A879EB1977C12500BCD647 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				18A87A0C1977C12500BCD647 /* Images.xcassets in Resources */,
+				18A879FB1977C12500BCD647 /* InfoPlist.strings in Resources */,
+				18A87A041977C12500BCD647 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		18A87A0F1977C12500BCD647 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				18A87A1D1977C12500BCD647 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		18A879E91977C12500BCD647 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				18F8F83C1978A8E100C403D3 /* KD3PowerPlantController.m in Sources */,
+				18D3D1471978107100D337D0 /* UIColor+RGBValues.m in Sources */,
+				18F8F893197912C800C403D3 /* KD3CommonTools.m in Sources */,
+				18A879FD1977C12500BCD647 /* main.m in Sources */,
+				18A87A2A1977C25A00BCD647 /* KD3PowerUnitViewController.m in Sources */,
+				18A87A011977C12500BCD647 /* KD3AppDelegate.m in Sources */,
+				18A87A071977C12500BCD647 /* KD3ControlledCorporationViewController.m in Sources */,
+				18D3D1461978107100D337D0 /* LDProgressView.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		18A87A0D1977C12500BCD647 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				18A87A1F1977C12500BCD647 /* kedongTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		18A87A171977C12500BCD647 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 18A879EC1977C12500BCD647 /* kedong */;
+			targetProxy = 18A87A161977C12500BCD647 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		18A879F91977C12500BCD647 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				18A879FA1977C12500BCD647 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		18A87A021977C12500BCD647 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				18A87A031977C12500BCD647 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		18A87A1B1977C12500BCD647 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				18A87A1C1977C12500BCD647 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		18A87A201977C12500BCD647 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		18A87A211977C12500BCD647 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		18A87A231977C12500BCD647 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "kedong/kedong-Prefix.pch";
+				INFOPLIST_FILE = "kedong/kedong-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		18A87A241977C12500BCD647 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "kedong/kedong-Prefix.pch";
+				INFOPLIST_FILE = "kedong/kedong-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		18A87A261977C12500BCD647 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/kedong.app/kedong";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "kedong/kedong-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "kedongTests/kedongTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		18A87A271977C12500BCD647 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/kedong.app/kedong";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "kedong/kedong-Prefix.pch";
+				INFOPLIST_FILE = "kedongTests/kedongTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		18A879E81977C12500BCD647 /* Build configuration list for PBXProject "kedong" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				18A87A201977C12500BCD647 /* Debug */,
+				18A87A211977C12500BCD647 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		18A87A221977C12500BCD647 /* Build configuration list for PBXNativeTarget "kedong" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				18A87A231977C12500BCD647 /* Debug */,
+				18A87A241977C12500BCD647 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		18A87A251977C12500BCD647 /* Build configuration list for PBXNativeTarget "kedongTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				18A87A261977C12500BCD647 /* Debug */,
+				18A87A271977C12500BCD647 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 18A879E51977C12500BCD647 /* Project object */;
+}
