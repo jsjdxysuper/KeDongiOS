@@ -94,6 +94,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		18599DB0197CC12F00697BAC /* EColumnChart */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = EColumnChart;
+			sourceTree = "<group>";
+		};
+		18599DB1197CC15400697BAC /* ProgressChart */ = {
+			isa = PBXGroup;
+			children = (
+				18D3D1421978107100D337D0 /* LDProgressView.h */,
+				18D3D1431978107100D337D0 /* LDProgressView.m */,
+				18D3D1441978107100D337D0 /* UIColor+RGBValues.h */,
+				18D3D1451978107100D337D0 /* UIColor+RGBValues.m */,
+			);
+			name = ProgressChart;
+			sourceTree = "<group>";
+		};
 		18A879E41977C12500BCD647 = {
 			isa = PBXGroup;
 			children = (
@@ -127,12 +145,10 @@
 		18A879F61977C12500BCD647 /* kedong */ = {
 			isa = PBXGroup;
 			children = (
+				18599DB1197CC15400697BAC /* ProgressChart */,
+				18599DB0197CC12F00697BAC /* EColumnChart */,
 				18F8F891197912C800C403D3 /* KD3CommonTools.h */,
 				18F8F892197912C800C403D3 /* KD3CommonTools.m */,
-				18D3D1421978107100D337D0 /* LDProgressView.h */,
-				18D3D1431978107100D337D0 /* LDProgressView.m */,
-				18D3D1441978107100D337D0 /* UIColor+RGBValues.h */,
-				18D3D1451978107100D337D0 /* UIColor+RGBValues.m */,
 				18A879FF1977C12500BCD647 /* KD3AppDelegate.h */,
 				18A87A001977C12500BCD647 /* KD3AppDelegate.m */,
 				18A87A021977C12500BCD647 /* Main.storyboard */,
