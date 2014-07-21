@@ -7,7 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "EColumnChart.h"
 
 @interface KD3PowerPlantController : UITableViewController
-    <UITableViewDataSource, UITableViewDelegate>
+    <UITableViewDataSource, UITableViewDelegate,
+    EColumnChartDelegate, EColumnChartDataSource>
+
+@property (strong, nonatomic) EColumnChart *eColumnChart;
+
 @end

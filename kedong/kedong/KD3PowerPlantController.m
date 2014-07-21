@@ -9,6 +9,10 @@
 #import "KD3PowerPlantController.h"
 #import "LDProgressView.h"
 #import "KD3CommonTools.h"
+#import "EFloatBox.h"
+#import "EColor.h"
+#import "EColumnDataModel.h"
+#import "EColumnChartLabel.h"
 
 @interface KD3PowerPlantController ()
 //NSString:serialNumber, NSArray:substract.
@@ -19,6 +23,14 @@
 @property (strong, nonatomic) NSMutableDictionary *progressDiffDic;
 
 @property (strong, nonatomic) NSArray *colorsArray;
+
+
+//properties for progressDiffEColumnChart
+@property (nonatomic, strong) NSArray *data;
+@property (nonatomic, strong) EFloatBox *eFloatBox;
+
+@property (nonatomic, strong) EColumn *eColumnSelected;
+@property (nonatomic, strong) UIColor *tempColor;
 @end
 
 @implementation KD3PowerPlantController
@@ -72,6 +84,30 @@
                         [NSNumber numberWithInt:-5],@"盘锦",
                         [NSNumber numberWithInt:3],@"辽阳",
                         [NSNumber numberWithInt:7],@"锦州",nil];
+    
+    
+    
+    //Datasource init for progressDiffEColumnChart
+    NSArray *plantNames = [[NSArray alloc] initWithObjects:@"丹东", @"大连",@"营口",@"鞍山",@"锦州",@"锦州", @"沈阳", nil];
+    NSMutableArray *temp = [NSMutableArray array];
+    for (int i = 0; i < 5; i++)
+    {
+        int value = arc4random() % 100;
+        EColumnDataModel *eColumnDataModel = [[EColumnDataModel alloc] initWithLabel:[plantNames objectAtIndex:i] value:value index:i unit:@"MWh"];
+        [temp addObject:eColumnDataModel];
+    }
+    
+    EColumnDataModel *eColumnDataModel = [[EColumnDataModel alloc] initWithLabel:[plantNames objectAtIndex:5] value:20 index:5 unit:@"MWh"];
+    [temp addObject:eColumnDataModel];
+    
+    eColumnDataModel = [[EColumnDataModel alloc] initWithLabel:[plantNames objectAtIndex: 6] value:10 index:6 unit:@"MWh"];
+    [temp addObject:eColumnDataModel];
+    
+    
+    _data = [NSArray arrayWithArray:temp];
+    
+    
+
 
 
 }
@@ -84,11 +120,20 @@
 
 #pragma mark - Table view data source
 
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if(2 ==[indexPath section])
+        return 180;
+    else
+        return 44;
+}
+
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
 
     // Return the number of sections.
-    return 2;
+    return 3;
 }
 
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
@@ -118,6 +163,7 @@
             break;
         default:
             //ret = [_progressDiffDic count];
+            ret = 1;
             break;
     }
     return ret;
@@ -187,15 +233,144 @@
 
         [progressUIView addSubview:progressView];
         cellLabel6.text = [keysArray objectAtIndex:row];
-    }else{
-        UILabel *cellLabel7 = (UILabel *)[cell viewWithTag:7];
-        cellLabel7.text = [_progressDiffDic objectForKey:[keysArray objectAtIndex:row]];
+    }else if(2 == section){
+        UIView *progressDiffUIView = (UILabel *)[cell viewWithTag:8];
+        
+        _eColumnChart =
+            [[EColumnChart alloc] initWithFrame:CGRectMake(40, 10,                                                                              progressDiffUIView.frame.size.width-50,
+                150)];
+        //[_eColumnChart setNormalColumnColor:[UIColor purpleColor]];
+        [_eColumnChart setColumnsIndexStartFromLeft:YES];
+        [_eColumnChart setDelegate:self];
+        [_eColumnChart setDataSource:self];
+        [progressDiffUIView addSubview:_eColumnChart];
+        
     }
     // Configure the cell...
     
     return cell;
 }
 
+#pragma mark - EColumnChart Datasource
+
+
+- (NSInteger)numberOfColumnsInEColumnChart:(EColumnChart *)eColumnChart
+{
+    return [_data count];
+}
+
+- (NSInteger)numberOfColumnsPresentedEveryTime:(EColumnChart *)eColumnChart
+{
+    return 7;
+}
+
+- (EColumnDataModel *)highestValueEColumnChart:(EColumnChart *)eColumnChart
+{
+    EColumnDataModel *maxDataModel = nil;
+    float maxValue = -FLT_MIN;
+    for (EColumnDataModel *dataModel in _data)
+    {
+        if (dataModel.value > maxValue)
+        {
+            maxValue = dataModel.value;
+            maxDataModel = dataModel;
+        }
+    }
+    return maxDataModel;
+}
+
+- (EColumnDataModel *)eColumnChart:(EColumnChart *)eColumnChart valueForIndex:(NSInteger)index
+{
+    if (index >= [_data count] || index < 0) return nil;
+    return [_data objectAtIndex:index];
+}
+
+- (UIColor *)colorForEColumn:(EColumn *)eColumn
+{
+    if (eColumn.eColumnDataModel.index < 3)
+    {
+        return [UIColor purpleColor];
+    }
+    else
+    {
+        return [UIColor redColor];
+    }
+
+}
+
+#pragma mark - EColumnChart Delegate
+
+- (void)eColumnChart:(EColumnChart *)eColumnChart
+     didSelectColumn:(EColumn *)eColumn
+{
+    NSLog(@"Index: %d  Value: %f", eColumn.eColumnDataModel.index, eColumn.eColumnDataModel.value);
+    
+    if (_eColumnSelected)
+    {
+        _eColumnSelected.barColor = _tempColor;
+    }
+    _eColumnSelected = eColumn;
+    _tempColor = eColumn.barColor;
+    eColumn.barColor = [UIColor blackColor];
+    
+//    _valueLabel.text = [NSString stringWithFormat:@"%.1f",eColumn.eColumnDataModel.value];
+}
+
+- (void)eColumnChart:(EColumnChart *)eColumnChart
+fingerDidEnterColumn:(EColumn *)eColumn
+{
+    /**The EFloatBox here, is just to show an example of
+     taking adventage of the event handling system of the Echart.
+     You can do even better effects here, according to your needs.*/
+    NSLog(@"Finger did enter %d", eColumn.eColumnDataModel.index);
+    CGFloat eFloatBoxX = eColumn.frame.origin.x + eColumn.frame.size.width * 1.25;
+    CGFloat eFloatBoxY = eColumn.frame.origin.y + eColumn.frame.size.height * (1-eColumn.grade);
+    if (_eFloatBox)
+    {
+        [_eFloatBox removeFromSuperview];
+        _eFloatBox.frame = CGRectMake(eFloatBoxX, eFloatBoxY, _eFloatBox.frame.size.width, _eFloatBox.frame.size.height);
+        [_eFloatBox setValue:eColumn.eColumnDataModel.value];
+        [eColumnChart addSubview:_eFloatBox];
+    }
+    else
+    {
+        _eFloatBox = [[EFloatBox alloc] initWithPosition:CGPointMake(eFloatBoxX, eFloatBoxY) value:eColumn.eColumnDataModel.value unit:@"kWh" title:@"Title"];
+        _eFloatBox.alpha = 0.0;
+        [eColumnChart addSubview:_eFloatBox];
+        
+    }
+    eFloatBoxY -= (_eFloatBox.frame.size.height + eColumn.frame.size.width * 0.25);
+    _eFloatBox.frame = CGRectMake(eFloatBoxX, eFloatBoxY, _eFloatBox.frame.size.width, _eFloatBox.frame.size.height);
+    [UIView animateWithDuration:0.5 delay:0 options:UIViewAnimationOptionTransitionNone animations:^{
+        _eFloatBox.alpha = 1.0;
+        
+    } completion:^(BOOL finished) {
+    }];
+    
+}
+
+- (void)eColumnChart:(EColumnChart *)eColumnChart
+fingerDidLeaveColumn:(EColumn *)eColumn
+{
+    NSLog(@"Finger did leave %d", eColumn.eColumnDataModel.index);
+    
+}
+
+- (void)fingerDidLeaveEColumnChart:(EColumnChart *)eColumnChart
+{
+    if (_eFloatBox)
+    {
+        [UIView animateWithDuration:0.5 delay:0 options:UIViewAnimationOptionTransitionNone animations:^{
+            _eFloatBox.alpha = 0.0;
+            _eFloatBox.frame = CGRectMake(_eFloatBox.frame.origin.x, _eFloatBox.frame.origin.y + _eFloatBox.frame.size.height, _eFloatBox.frame.size.width, _eFloatBox.frame.size.height);
+        } completion:^(BOOL finished) {
+            [_eFloatBox removeFromSuperview];
+            _eFloatBox = nil;
+        }];
+        
+    }
+    
+}
 
 /*
 // Override to support conditional editing of the table view.
