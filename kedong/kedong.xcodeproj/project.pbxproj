@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		18599DCF197CF23000697BAC /* EColumn.m in Sources */ = {isa = PBXBuildFile; fileRef = 18599DC6197CF23000697BAC /* EColumn.m */; };
+		18599DD0197CF23000697BAC /* EColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 18599DC8197CF23000697BAC /* EColor.m */; };
+		18599DD1197CF23000697BAC /* EColumnDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 18599DCA197CF23000697BAC /* EColumnDataModel.m */; };
+		18599DD2197CF23000697BAC /* EColumnChartLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 18599DCC197CF23000697BAC /* EColumnChartLabel.m */; };
+		18599DD3197CF23000697BAC /* EFloatBox.m in Sources */ = {isa = PBXBuildFile; fileRef = 18599DCE197CF23000697BAC /* EFloatBox.m */; };
+		18599DD6197CF24900697BAC /* EColumnChart.m in Sources */ = {isa = PBXBuildFile; fileRef = 18599DD5197CF24900697BAC /* EColumnChart.m */; };
 		18A879F11977C12500BCD647 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18A879F01977C12500BCD647 /* Foundation.framework */; };
 		18A879F31977C12500BCD647 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18A879F21977C12500BCD647 /* CoreGraphics.framework */; };
 		18A879F51977C12500BCD647 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18A879F41977C12500BCD647 /* UIKit.framework */; };
@@ -39,6 +45,18 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		18599DC5197CF23000697BAC /* EColumn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EColumn.h; sourceTree = "<group>"; };
+		18599DC6197CF23000697BAC /* EColumn.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EColumn.m; sourceTree = "<group>"; };
+		18599DC7197CF23000697BAC /* EColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EColor.h; sourceTree = "<group>"; };
+		18599DC8197CF23000697BAC /* EColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EColor.m; sourceTree = "<group>"; };
+		18599DC9197CF23000697BAC /* EColumnDataModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EColumnDataModel.h; sourceTree = "<group>"; };
+		18599DCA197CF23000697BAC /* EColumnDataModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EColumnDataModel.m; sourceTree = "<group>"; };
+		18599DCB197CF23000697BAC /* EColumnChartLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EColumnChartLabel.h; sourceTree = "<group>"; };
+		18599DCC197CF23000697BAC /* EColumnChartLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EColumnChartLabel.m; sourceTree = "<group>"; };
+		18599DCD197CF23000697BAC /* EFloatBox.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EFloatBox.h; sourceTree = "<group>"; };
+		18599DCE197CF23000697BAC /* EFloatBox.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EFloatBox.m; sourceTree = "<group>"; };
+		18599DD4197CF24900697BAC /* EColumnChart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EColumnChart.h; sourceTree = "<group>"; };
+		18599DD5197CF24900697BAC /* EColumnChart.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EColumnChart.m; sourceTree = "<group>"; };
 		18A879ED1977C12500BCD647 /* kedong.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = kedong.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		18A879F01977C12500BCD647 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		18A879F21977C12500BCD647 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -97,6 +115,9 @@
 		18599DB0197CC12F00697BAC /* EColumnChart */ = {
 			isa = PBXGroup;
 			children = (
+				18599DD4197CF24900697BAC /* EColumnChart.h */,
+				18599DD5197CF24900697BAC /* EColumnChart.m */,
+				18599DBE197CE9C100697BAC /* Components */,
 			);
 			name = EColumnChart;
 			sourceTree = "<group>";
@@ -110,6 +131,23 @@
 				18D3D1451978107100D337D0 /* UIColor+RGBValues.m */,
 			);
 			name = ProgressChart;
+			sourceTree = "<group>";
+		};
+		18599DBE197CE9C100697BAC /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				18599DC5197CF23000697BAC /* EColumn.h */,
+				18599DC6197CF23000697BAC /* EColumn.m */,
+				18599DC7197CF23000697BAC /* EColor.h */,
+				18599DC8197CF23000697BAC /* EColor.m */,
+				18599DC9197CF23000697BAC /* EColumnDataModel.h */,
+				18599DCA197CF23000697BAC /* EColumnDataModel.m */,
+				18599DCB197CF23000697BAC /* EColumnChartLabel.h */,
+				18599DCC197CF23000697BAC /* EColumnChartLabel.m */,
+				18599DCD197CF23000697BAC /* EFloatBox.h */,
+				18599DCE197CF23000697BAC /* EFloatBox.m */,
+			);
+			name = Components;
 			sourceTree = "<group>";
 		};
 		18A879E41977C12500BCD647 = {
@@ -291,14 +329,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18599DD3197CF23000697BAC /* EFloatBox.m in Sources */,
 				18F8F83C1978A8E100C403D3 /* KD3PowerPlantController.m in Sources */,
+				18599DD6197CF24900697BAC /* EColumnChart.m in Sources */,
+				18599DD0197CF23000697BAC /* EColor.m in Sources */,
 				18D3D1471978107100D337D0 /* UIColor+RGBValues.m in Sources */,
 				18F8F893197912C800C403D3 /* KD3CommonTools.m in Sources */,
 				18A879FD1977C12500BCD647 /* main.m in Sources */,
+				18599DD2197CF23000697BAC /* EColumnChartLabel.m in Sources */,
+				18599DCF197CF23000697BAC /* EColumn.m in Sources */,
 				18A87A2A1977C25A00BCD647 /* KD3PowerUnitViewController.m in Sources */,
 				18A87A011977C12500BCD647 /* KD3AppDelegate.m in Sources */,
 				18A87A071977C12500BCD647 /* KD3ControlledCorporationViewController.m in Sources */,
 				18D3D1461978107100D337D0 /* LDProgressView.m in Sources */,
+				18599DD1197CF23000697BAC /* EColumnDataModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
