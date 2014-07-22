@@ -13,6 +13,7 @@
 		18599DD2197CF23000697BAC /* EColumnChartLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 18599DCC197CF23000697BAC /* EColumnChartLabel.m */; };
 		18599DD3197CF23000697BAC /* EFloatBox.m in Sources */ = {isa = PBXBuildFile; fileRef = 18599DCE197CF23000697BAC /* EFloatBox.m */; };
 		18599DD6197CF24900697BAC /* EColumnChart.m in Sources */ = {isa = PBXBuildFile; fileRef = 18599DD5197CF24900697BAC /* EColumnChart.m */; };
+		188F5731197E3123006E4947 /* KD3LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 188F5730197E3123006E4947 /* KD3LoginViewController.m */; };
 		1891C13E197D514200118C78 /* TWRLineChart.m in Sources */ = {isa = PBXBuildFile; fileRef = 1891C13D197D514200118C78 /* TWRLineChart.m */; };
 		1891C141197D517800118C78 /* TWRDataSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 1891C140197D517800118C78 /* TWRDataSet.m */; };
 		1891C144197D51C600118C78 /* TWRChartView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1891C143197D51C600118C78 /* TWRChartView.m */; };
@@ -42,7 +43,7 @@
 		18A87A2A1977C25A00BCD647 /* KD3PowerUnitViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A87A291977C25A00BCD647 /* KD3PowerUnitViewController.m */; };
 		18D3D1461978107100D337D0 /* LDProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D3D1431978107100D337D0 /* LDProgressView.m */; };
 		18D3D1471978107100D337D0 /* UIColor+RGBValues.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D3D1451978107100D337D0 /* UIColor+RGBValues.m */; };
-		18F8F83C1978A8E100C403D3 /* KD3PowerPlantController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18F8F83B1978A8E100C403D3 /* KD3PowerPlantController.m */; };
+		18F8F83C1978A8E100C403D3 /* KD3PowerPlantViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18F8F83B1978A8E100C403D3 /* KD3PowerPlantViewController.m */; };
 		18F8F893197912C800C403D3 /* KD3CommonTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 18F8F892197912C800C403D3 /* KD3CommonTools.m */; };
 /* End PBXBuildFile section */
 
@@ -69,6 +70,8 @@
 		18599DCE197CF23000697BAC /* EFloatBox.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EFloatBox.m; sourceTree = "<group>"; };
 		18599DD4197CF24900697BAC /* EColumnChart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EColumnChart.h; sourceTree = "<group>"; };
 		18599DD5197CF24900697BAC /* EColumnChart.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EColumnChart.m; sourceTree = "<group>"; };
+		188F572F197E3123006E4947 /* KD3LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KD3LoginViewController.h; sourceTree = "<group>"; };
+		188F5730197E3123006E4947 /* KD3LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KD3LoginViewController.m; sourceTree = "<group>"; };
 		1891C13C197D514200118C78 /* TWRLineChart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWRLineChart.h; sourceTree = "<group>"; };
 		1891C13D197D514200118C78 /* TWRLineChart.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWRLineChart.m; sourceTree = "<group>"; };
 		1891C13F197D517800118C78 /* TWRDataSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWRDataSet.h; sourceTree = "<group>"; };
@@ -113,8 +116,8 @@
 		18D3D1431978107100D337D0 /* LDProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LDProgressView.m; sourceTree = "<group>"; };
 		18D3D1441978107100D337D0 /* UIColor+RGBValues.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+RGBValues.h"; sourceTree = "<group>"; };
 		18D3D1451978107100D337D0 /* UIColor+RGBValues.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+RGBValues.m"; sourceTree = "<group>"; };
-		18F8F83A1978A8E100C403D3 /* KD3PowerPlantController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KD3PowerPlantController.h; sourceTree = "<group>"; };
-		18F8F83B1978A8E100C403D3 /* KD3PowerPlantController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KD3PowerPlantController.m; sourceTree = "<group>"; };
+		18F8F83A1978A8E100C403D3 /* KD3PowerPlantViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KD3PowerPlantViewController.h; sourceTree = "<group>"; };
+		18F8F83B1978A8E100C403D3 /* KD3PowerPlantViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KD3PowerPlantViewController.m; sourceTree = "<group>"; };
 		18F8F891197912C800C403D3 /* KD3CommonTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KD3CommonTools.h; sourceTree = "<group>"; };
 		18F8F892197912C800C403D3 /* KD3CommonTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KD3CommonTools.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -247,8 +250,10 @@
 				18A879FF1977C12500BCD647 /* KD3AppDelegate.h */,
 				18A87A001977C12500BCD647 /* KD3AppDelegate.m */,
 				18A87A021977C12500BCD647 /* Main.storyboard */,
-				18F8F83A1978A8E100C403D3 /* KD3PowerPlantController.h */,
-				18F8F83B1978A8E100C403D3 /* KD3PowerPlantController.m */,
+				188F572F197E3123006E4947 /* KD3LoginViewController.h */,
+				188F5730197E3123006E4947 /* KD3LoginViewController.m */,
+				18F8F83A1978A8E100C403D3 /* KD3PowerPlantViewController.h */,
+				18F8F83B1978A8E100C403D3 /* KD3PowerPlantViewController.m */,
 				18A87A281977C25A00BCD647 /* KD3PowerUnitViewController.h */,
 				18A87A291977C25A00BCD647 /* KD3PowerUnitViewController.m */,
 				18A87A051977C12500BCD647 /* KD3ControlledCorporationViewController.h */,
@@ -391,7 +396,7 @@
 			files = (
 				18599DD3197CF23000697BAC /* EFloatBox.m in Sources */,
 				1891C144197D51C600118C78 /* TWRChartView.m in Sources */,
-				18F8F83C1978A8E100C403D3 /* KD3PowerPlantController.m in Sources */,
+				18F8F83C1978A8E100C403D3 /* KD3PowerPlantViewController.m in Sources */,
 				18599DD6197CF24900697BAC /* EColumnChart.m in Sources */,
 				1891C13E197D514200118C78 /* TWRLineChart.m in Sources */,
 				1891C14D197D525C00118C78 /* TWRCircularChart.m in Sources */,
@@ -407,6 +412,7 @@
 				18599DCF197CF23000697BAC /* EColumn.m in Sources */,
 				1891C141197D517800118C78 /* TWRDataSet.m in Sources */,
 				1891C147197D51DA00118C78 /* TWRChartBuilder.m in Sources */,
+				188F5731197E3123006E4947 /* KD3LoginViewController.m in Sources */,
 				18A87A2A1977C25A00BCD647 /* KD3PowerUnitViewController.m in Sources */,
 				18A87A011977C12500BCD647 /* KD3AppDelegate.m in Sources */,
 				18A87A071977C12500BCD647 /* KD3ControlledCorporationViewController.m in Sources */,

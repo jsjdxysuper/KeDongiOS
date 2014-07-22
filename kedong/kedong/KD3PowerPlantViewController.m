@@ -6,7 +6,7 @@
 //  Copyright (c) 2014年 apple. All rights reserved.
 //
 
-#import "KD3PowerPlantController.h"
+#import "KD3PowerPlantViewController.h"
 #import "LDProgressView.h"
 #import "KD3CommonTools.h"
 #import "EFloatBox.h"
@@ -14,7 +14,7 @@
 #import "EColumnDataModel.h"
 #import "EColumnChartLabel.h"
 
-@interface KD3PowerPlantController ()
+@interface KD3PowerPlantViewController ()
 //NSString:serialNumber, NSArray:substract.
 @property (strong, nonatomic) NSMutableDictionary *plantsSubstractDic;
 //NSString:serialNumber, NSInteger:progress.
@@ -33,7 +33,7 @@
 @property (nonatomic, strong) UIColor *tempColor;
 @end
 
-@implementation KD3PowerPlantController
+@implementation KD3PowerPlantViewController
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
