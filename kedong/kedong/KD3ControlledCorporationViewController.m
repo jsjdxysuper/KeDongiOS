@@ -39,6 +39,18 @@
     
     
     
+
+    
+    
+    
+    
+
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    
+    
     NSInteger hourNum = 24;
     NSMutableArray *data1 = [[NSMutableArray alloc] initWithCapacity:hourNum];
     NSMutableArray *data2 = [[NSMutableArray alloc] initWithCapacity:hourNum];
@@ -62,14 +74,6 @@
     
     [_oneDayChartView loadLineChart:line];
     
-    
-    
-    
-
-}
-
-- (void)viewWillAppear:(BOOL)animated
-{
     [super viewDidAppear:YES];
     NSInteger daysNum = 30;
     NSMutableArray *data3 = [[NSMutableArray alloc] initWithCapacity:daysNum];
@@ -94,10 +98,13 @@
     
     [_oneMonthChartView loadLineChart:line1];
     
-
+    [super viewWillAppear:YES];
 }
 
-
+- (void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:YES];
+}
 
 - (void)didReceiveMemoryWarning
 {

@@ -14,6 +14,10 @@
 		18599DD3197CF23000697BAC /* EFloatBox.m in Sources */ = {isa = PBXBuildFile; fileRef = 18599DCE197CF23000697BAC /* EFloatBox.m */; };
 		18599DD6197CF24900697BAC /* EColumnChart.m in Sources */ = {isa = PBXBuildFile; fileRef = 18599DD5197CF24900697BAC /* EColumnChart.m */; };
 		188F5731197E3123006E4947 /* KD3LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 188F5730197E3123006E4947 /* KD3LoginViewController.m */; };
+		188F5736197E5C2F006E4947 /* blue-ball.png in Resources */ = {isa = PBXBuildFile; fileRef = 188F5732197E5C2F006E4947 /* blue-ball.png */; };
+		188F5737197E5C2F006E4947 /* green-ball.png in Resources */ = {isa = PBXBuildFile; fileRef = 188F5733197E5C2F006E4947 /* green-ball.png */; };
+		188F5738197E5C2F006E4947 /* orange-ball.png in Resources */ = {isa = PBXBuildFile; fileRef = 188F5734197E5C2F006E4947 /* orange-ball.png */; };
+		188F5739197E5C2F006E4947 /* red-ball.png in Resources */ = {isa = PBXBuildFile; fileRef = 188F5735197E5C2F006E4947 /* red-ball.png */; };
 		1891C13E197D514200118C78 /* TWRLineChart.m in Sources */ = {isa = PBXBuildFile; fileRef = 1891C13D197D514200118C78 /* TWRLineChart.m */; };
 		1891C141197D517800118C78 /* TWRDataSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 1891C140197D517800118C78 /* TWRDataSet.m */; };
 		1891C144197D51C600118C78 /* TWRChartView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1891C143197D51C600118C78 /* TWRChartView.m */; };
@@ -72,6 +76,10 @@
 		18599DD5197CF24900697BAC /* EColumnChart.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EColumnChart.m; sourceTree = "<group>"; };
 		188F572F197E3123006E4947 /* KD3LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KD3LoginViewController.h; sourceTree = "<group>"; };
 		188F5730197E3123006E4947 /* KD3LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KD3LoginViewController.m; sourceTree = "<group>"; };
+		188F5732197E5C2F006E4947 /* blue-ball.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "blue-ball.png"; sourceTree = "<group>"; };
+		188F5733197E5C2F006E4947 /* green-ball.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "green-ball.png"; sourceTree = "<group>"; };
+		188F5734197E5C2F006E4947 /* orange-ball.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "orange-ball.png"; sourceTree = "<group>"; };
+		188F5735197E5C2F006E4947 /* red-ball.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "red-ball.png"; sourceTree = "<group>"; };
 		1891C13C197D514200118C78 /* TWRLineChart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWRLineChart.h; sourceTree = "<group>"; };
 		1891C13D197D514200118C78 /* TWRLineChart.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWRLineChart.m; sourceTree = "<group>"; };
 		1891C13F197D517800118C78 /* TWRDataSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWRDataSet.h; sourceTree = "<group>"; };
@@ -184,6 +192,17 @@
 			name = Components;
 			sourceTree = "<group>";
 		};
+		188F573A197E5C3A006E4947 /* images */ = {
+			isa = PBXGroup;
+			children = (
+				188F5732197E5C2F006E4947 /* blue-ball.png */,
+				188F5733197E5C2F006E4947 /* green-ball.png */,
+				188F5734197E5C2F006E4947 /* orange-ball.png */,
+				188F5735197E5C2F006E4947 /* red-ball.png */,
+			);
+			name = images;
+			sourceTree = "<group>";
+		};
 		1891C13B197D50C900118C78 /* TWRChart */ = {
 			isa = PBXGroup;
 			children = (
@@ -242,6 +261,7 @@
 		18A879F61977C12500BCD647 /* kedong */ = {
 			isa = PBXGroup;
 			children = (
+				188F573A197E5C3A006E4947 /* images */,
 				1891C13B197D50C900118C78 /* TWRChart */,
 				18599DB1197CC15400697BAC /* ProgressChart */,
 				18599DB0197CC12F00697BAC /* EColumnChart */,
@@ -372,9 +392,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				1891C15A197D60A600118C78 /* chart.min.js in Resources */,
+				188F5737197E5C2F006E4947 /* green-ball.png in Resources */,
 				18A87A0C1977C12500BCD647 /* Images.xcassets in Resources */,
+				188F5736197E5C2F006E4947 /* blue-ball.png in Resources */,
 				1891C159197D5B1100118C78 /* index.html in Resources */,
 				18A879FB1977C12500BCD647 /* InfoPlist.strings in Resources */,
+				188F5738197E5C2F006E4947 /* orange-ball.png in Resources */,
+				188F5739197E5C2F006E4947 /* red-ball.png in Resources */,
 				18A87A041977C12500BCD647 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
