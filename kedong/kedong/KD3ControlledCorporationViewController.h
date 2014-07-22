@@ -10,6 +10,6 @@
 
 @interface KD3ControlledCorporationViewController : UIViewController
 
-//@property (weak, nonatomic) IBOutlet UIView *oneDayLineChartUIView;
-@property (weak, nonatomic) IBOutlet UIWebView *webView;
+@property (weak, nonatomic) IBOutlet UIView *oneDayLineChartUIView;
+@property (weak, nonatomic) IBOutlet UIView *oneMonthLineChartUIView;
 @end

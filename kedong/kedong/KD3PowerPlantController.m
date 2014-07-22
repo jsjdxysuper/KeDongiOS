@@ -92,7 +92,7 @@
     NSMutableArray *temp = [NSMutableArray array];
     for (int i = 0; i < 5; i++)
     {
-        int value = arc4random() % 100;
+        int value = 10+arc4random() % 100;
         EColumnDataModel *eColumnDataModel = [[EColumnDataModel alloc] initWithLabel:[plantNames objectAtIndex:i] value:value index:i unit:@"MWh"];
         [temp addObject:eColumnDataModel];
     }
