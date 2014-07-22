@@ -33,28 +33,11 @@
 
 
     _oneMonthChartView = [[TWRChartView alloc] initWithFrame:CGRectMake(0, 64, 300, 200)];
-//    
-//    UILabel *labelToday = [[UILabel alloc] initWithFrame:CGRectMake(230, 10, 20, 20)];
-//    labelToday.text = @"今";
-//    [labelToday setTextColor:[UIColor blueColor]];
-//    
-//    UILabel *labelYestoday = [[UILabel alloc] initWithFrame:CGRectMake(260, 10, 20, 20)];
-//    labelYestoday.text = @"昨";
-//    [labelYestoday setTextColor:[UIColor redColor]];
-    
     _oneMonthChartView.backgroundColor = [UIColor clearColor];
     [_oneMonthLineChartUIView addSubview:_oneMonthChartView];
     
-//    [_oneMonthLineChartUIView addSubview:labelToday];
-//    [_oneMonthLineChartUIView addSubview:labelYestoday];
     
     
-    
-
-}
-
-- (void)viewWillAppear:(BOOL)animated
-{
     
     NSInteger hourNum = 24;
     NSMutableArray *data1 = [[NSMutableArray alloc] initWithCapacity:hourNum];
@@ -79,9 +62,15 @@
     
     [_oneDayChartView loadLineChart:line];
     
+    
+    
+    
 
-    
-    
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewDidAppear:YES];
     NSInteger daysNum = 30;
     NSMutableArray *data3 = [[NSMutableArray alloc] initWithCapacity:daysNum];
     NSMutableArray *data4 = [[NSMutableArray alloc] initWithCapacity:daysNum];
@@ -105,18 +94,11 @@
     
     [_oneMonthChartView loadLineChart:line1];
     
-    
-
-    
-
-    
 
 }
 
-- (void)viewDidAppear:(BOOL)animated
-{
 
-}
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
