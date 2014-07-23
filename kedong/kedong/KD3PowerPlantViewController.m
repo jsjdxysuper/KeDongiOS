@@ -231,7 +231,8 @@
         progressView.progress = [progressNum floatValue]/100;
         progressView.borderRadius = @5;
         progressView.color = [KD3CommonTools getColor:row];
-        
+        progressView.type = LDProgressSolid;
+        progressView.flat = @YES;
         
 
         [progressUIView addSubview:progressView];
