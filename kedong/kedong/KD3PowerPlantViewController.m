@@ -1,8 +1,8 @@
 //
-//  KD3PowerPlantController.m
+//  KD3PowerPlant1ViewController.m
 //  kedong
 //
-//  Created by apple on 14-7-18.
+//  Created by apple on 14-7-24.
 //  Copyright (c) 2014年 apple. All rights reserved.
 //
 
@@ -14,7 +14,9 @@
 #import "EColumnDataModel.h"
 #import "EColumnChartLabel.h"
 
+
 @interface KD3PowerPlantViewController ()
+
 //NSString:serialNumber, NSArray:substract.
 @property (strong, nonatomic) NSMutableDictionary *plantsSubstractDic;
 //NSString:serialNumber, NSInteger:progress.
@@ -35,9 +37,9 @@
 
 @implementation KD3PowerPlantViewController
 
-- (id)initWithStyle:(UITableViewStyle)style
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
-    self = [super initWithStyle:style];
+    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
     }
@@ -51,12 +53,9 @@
 {
     [super viewDidLoad];
     
-    [UIColor colorWithRed:0.00f green:0.64f blue:0.00f alpha:1.00f];
-    
-    
     _plantsSubstractDic = [[NSMutableDictionary alloc] initWithCapacity:5];
     
-
+    
     NSArray *substractArray = [[NSArray alloc] initWithObjects:@"45",@"35",@"52",@"47", nil];
     [_plantsSubstractDic setObject:substractArray forKey:@"大连"];
     substractArray = [[NSArray alloc] initWithObjects:@"45", @"65",@"62",@"47", nil];
@@ -78,8 +77,8 @@
                     [NSNumber numberWithFloat:54],@"辽阳",
                     [NSNumber numberWithFloat:29],@"锦州",nil];
     
-
-
+    
+    
     
     _progressDiffDic = [[NSMutableDictionary alloc] initWithObjectsAndKeys:
                         [NSNumber numberWithInt:12],@"大连",
@@ -108,10 +107,6 @@
     
     
     _data = [NSArray arrayWithArray:temp];
-    
-    
-
-
 
 }
 
@@ -120,6 +115,7 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
 
 #pragma mark - Table view data source
 
@@ -134,7 +130,7 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-
+    
     // Return the number of sections.
     return 3;
 }
@@ -149,12 +145,10 @@
     else
         ret = [[NSString alloc] initWithFormat:@"日历进度差"];
     return ret;
-
+    
 }
-
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-
     NSInteger ret = 0;
     // Return the number of rows in the section.
     switch (section) {
@@ -171,6 +165,7 @@
     }
     return ret;
 }
+
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -194,7 +189,7 @@
     }
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier];
-
+    
     
     if( 0 == section){
         UILabel *cellLabel1 = (UILabel *)[cell viewWithTag:1];
@@ -234,15 +229,15 @@
         progressView.type = LDProgressSolid;
         progressView.flat = @YES;
         
-
+        
         [progressUIView addSubview:progressView];
         cellLabel6.text = [keysArray objectAtIndex:row];
     }else if(2 == section){
         UIView *progressDiffUIView = (UILabel *)[cell viewWithTag:8];
         
         _eColumnChart =
-            [[EColumnChart alloc] initWithFrame:CGRectMake(40, 10,                                                                              progressDiffUIView.frame.size.width-50,
-                150)];
+        [[EColumnChart alloc] initWithFrame:CGRectMake(40, 10,                                                                              progressDiffUIView.frame.size.width-50,
+                                                       150)];
         //[_eColumnChart setNormalColumnColor:[UIColor purpleColor]];
         [_eColumnChart setColumnsIndexStartFromLeft:YES];
         [_eColumnChart setDelegate:self];
@@ -299,7 +294,7 @@
     {
         return [UIColor redColor];
     }
-
+    
 }
 
 #pragma mark - EColumnChart Delegate
@@ -307,7 +302,7 @@
 - (void)eColumnChart:(EColumnChart *)eColumnChart
      didSelectColumn:(EColumn *)eColumn
 {
-    NSLog(@"Index: %d  Value: %f", eColumn.eColumnDataModel.index, eColumn.eColumnDataModel.value);
+    NSLog(@"Index: %ld  Value: %f", eColumn.eColumnDataModel.index, eColumn.eColumnDataModel.value);
     
     if (_eColumnSelected)
     {
@@ -317,7 +312,7 @@
     _tempColor = eColumn.barColor;
     eColumn.barColor = [UIColor blackColor];
     
-//    _valueLabel.text = [NSString stringWithFormat:@"%.1f",eColumn.eColumnDataModel.value];
+    //    _valueLabel.text = [NSString stringWithFormat:@"%.1f",eColumn.eColumnDataModel.value];
 }
 
 - (void)eColumnChart:(EColumnChart *)eColumnChart
@@ -326,7 +321,7 @@ fingerDidEnterColumn:(EColumn *)eColumn
     /**The EFloatBox here, is just to show an example of
      taking adventage of the event handling system of the Echart.
      You can do even better effects here, according to your needs.*/
-    NSLog(@"Finger did enter %d", eColumn.eColumnDataModel.index);
+    NSLog(@"Finger did enter %ld", (long)eColumn.eColumnDataModel.index);
     CGFloat eFloatBoxX = eColumn.frame.origin.x + eColumn.frame.size.width * 1.25;
     CGFloat eFloatBoxY = eColumn.frame.origin.y + eColumn.frame.size.height * (1-eColumn.grade);
     if (_eFloatBox)
@@ -356,7 +351,7 @@ fingerDidEnterColumn:(EColumn *)eColumn
 - (void)eColumnChart:(EColumnChart *)eColumnChart
 fingerDidLeaveColumn:(EColumn *)eColumn
 {
-    NSLog(@"Finger did leave %d", eColumn.eColumnDataModel.index);
+    NSLog(@"Finger did leave %ld", (long)eColumn.eColumnDataModel.index);
     
 }
 
@@ -375,45 +370,6 @@ fingerDidLeaveColumn:(EColumn *)eColumn
     }
     
 }
-
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
-}
-*/
-
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
-}
-*/
-
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath
-{
-}
-*/
-
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
-
 /*
 #pragma mark - Navigation
 

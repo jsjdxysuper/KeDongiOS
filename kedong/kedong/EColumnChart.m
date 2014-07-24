@@ -106,9 +106,9 @@
         }
         
         {
-            int totalColumnsRequired = 0;
+            NSInteger totalColumnsRequired = 0;
             totalColumnsRequired = [_dataSource numberOfColumnsPresentedEveryTime:self];
-            int totalColumns = 0;
+            NSInteger totalColumns = 0;
             totalColumns = [_dataSource numberOfColumnsInEColumnChart:self];
             /** Currently only support columns layout from right to left, WILL ADD OPTIONS LATER*/
             if (_columnsIndexStartFromLeft)
@@ -138,7 +138,7 @@
                     
                     EColumnChartLabel *eColumnChartLabel = [[EColumnChartLabel alloc] initWithFrame:CGRectMake(-1 * Y_COORDINATE_LABEL_WIDTH, -heightGap / 2.0 + heightGap * i, Y_COORDINATE_LABEL_WIDTH, heightGap)];
                     [eColumnChartLabel setTextAlignment:NSTextAlignmentCenter];
-                    eColumnChartLabel.text = [[NSString stringWithFormat:@"%d ", valueGap * (horizontalLabelsCount - i)] stringByAppendingString:[_dataSource highestValueEColumnChart:self].unit];;
+                    eColumnChartLabel.text = [[NSString stringWithFormat:@"%ld ", valueGap * (horizontalLabelsCount - i)] stringByAppendingString:[_dataSource highestValueEColumnChart:self].unit];;
                     [self addSubview:eColumnChartLabel];
                 }
                 
@@ -233,7 +233,7 @@
         return;
     }
     
-    int totalColumnsRequired = 0;
+    NSInteger totalColumnsRequired = 0;
     totalColumnsRequired = [_dataSource numberOfColumnsPresentedEveryTime:self];
     
     float widthOfTheColumnShouldBe = self.frame.size.width / (float)(totalColumnsRequired + (totalColumnsRequired + 1) * 0.5);
@@ -333,14 +333,14 @@
         NSLog(@"Important!! DataSource Not Set!");
         return;
     }
-    int index = _leftMostIndex + 1 * DIRECTION;
+    NSInteger index = _leftMostIndex + 1 * DIRECTION;
     EColumnDataModel *eColumnDataModel = [_dataSource eColumnChart:self valueForIndex:index];
     if (nil == eColumnDataModel) return;
     
     _leftMostIndex = _leftMostIndex + 1 * DIRECTION;
     _rightMostIndex = _rightMostIndex + 1 * DIRECTION;
     
-    int totalColumnsRequired = [_dataSource numberOfColumnsInEColumnChart:self];
+    NSInteger totalColumnsRequired = [_dataSource numberOfColumnsInEColumnChart:self];
     for (int i = 0; i < totalColumnsRequired; i++)
     {
         EColumn *eColumn = [_eColumns objectForKey:[NSNumber numberWithInteger:_leftMostIndex - i * DIRECTION]];
@@ -361,14 +361,14 @@
         NSLog(@"Important!! DataSource Not Set!");
         return;
     }
-    int index = _rightMostIndex - 1 * DIRECTION;
+    NSInteger index = _rightMostIndex - 1 * DIRECTION;
     EColumnDataModel *eColumnDataModel = [_dataSource eColumnChart:self valueForIndex:index];
     if (nil == eColumnDataModel) return;
     
     _leftMostIndex = _leftMostIndex - 1 * DIRECTION;
     _rightMostIndex = _rightMostIndex - 1 * DIRECTION;
     
-    int totalColumnsRequired = [_dataSource numberOfColumnsInEColumnChart:self];
+    NSInteger totalColumnsRequired = [_dataSource numberOfColumnsInEColumnChart:self];
     for (int i = 0; i < totalColumnsRequired; i++)
     {
         EColumn *eColumn = [_eColumns objectForKey:[NSNumber numberWithInteger:_rightMostIndex + i * DIRECTION]];

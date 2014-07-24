@@ -18,6 +18,7 @@
 		188F5737197E5C2F006E4947 /* green-ball.png in Resources */ = {isa = PBXBuildFile; fileRef = 188F5733197E5C2F006E4947 /* green-ball.png */; };
 		188F5738197E5C2F006E4947 /* orange-ball.png in Resources */ = {isa = PBXBuildFile; fileRef = 188F5734197E5C2F006E4947 /* orange-ball.png */; };
 		188F5739197E5C2F006E4947 /* red-ball.png in Resources */ = {isa = PBXBuildFile; fileRef = 188F5735197E5C2F006E4947 /* red-ball.png */; };
+		188F8FAA1980D89A00B49619 /* KD3PowerPlantViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 188F8FA91980D89A00B49619 /* KD3PowerPlantViewController.m */; };
 		1891C13E197D514200118C78 /* TWRLineChart.m in Sources */ = {isa = PBXBuildFile; fileRef = 1891C13D197D514200118C78 /* TWRLineChart.m */; };
 		1891C141197D517800118C78 /* TWRDataSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 1891C140197D517800118C78 /* TWRDataSet.m */; };
 		1891C144197D51C600118C78 /* TWRChartView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1891C143197D51C600118C78 /* TWRChartView.m */; };
@@ -47,7 +48,6 @@
 		18A87A2A1977C25A00BCD647 /* KD3PowerUnitViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A87A291977C25A00BCD647 /* KD3PowerUnitViewController.m */; };
 		18D3D1461978107100D337D0 /* LDProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D3D1431978107100D337D0 /* LDProgressView.m */; };
 		18D3D1471978107100D337D0 /* UIColor+RGBValues.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D3D1451978107100D337D0 /* UIColor+RGBValues.m */; };
-		18F8F83C1978A8E100C403D3 /* KD3PowerPlantViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18F8F83B1978A8E100C403D3 /* KD3PowerPlantViewController.m */; };
 		18F8F893197912C800C403D3 /* KD3CommonTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 18F8F892197912C800C403D3 /* KD3CommonTools.m */; };
 /* End PBXBuildFile section */
 
@@ -80,6 +80,8 @@
 		188F5733197E5C2F006E4947 /* green-ball.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "green-ball.png"; sourceTree = "<group>"; };
 		188F5734197E5C2F006E4947 /* orange-ball.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "orange-ball.png"; sourceTree = "<group>"; };
 		188F5735197E5C2F006E4947 /* red-ball.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "red-ball.png"; sourceTree = "<group>"; };
+		188F8FA81980D89A00B49619 /* KD3PowerPlantViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KD3PowerPlantViewController.h; sourceTree = "<group>"; };
+		188F8FA91980D89A00B49619 /* KD3PowerPlantViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KD3PowerPlantViewController.m; sourceTree = "<group>"; };
 		1891C13C197D514200118C78 /* TWRLineChart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWRLineChart.h; sourceTree = "<group>"; };
 		1891C13D197D514200118C78 /* TWRLineChart.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWRLineChart.m; sourceTree = "<group>"; };
 		1891C13F197D517800118C78 /* TWRDataSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWRDataSet.h; sourceTree = "<group>"; };
@@ -124,8 +126,6 @@
 		18D3D1431978107100D337D0 /* LDProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LDProgressView.m; sourceTree = "<group>"; };
 		18D3D1441978107100D337D0 /* UIColor+RGBValues.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+RGBValues.h"; sourceTree = "<group>"; };
 		18D3D1451978107100D337D0 /* UIColor+RGBValues.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+RGBValues.m"; sourceTree = "<group>"; };
-		18F8F83A1978A8E100C403D3 /* KD3PowerPlantViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KD3PowerPlantViewController.h; sourceTree = "<group>"; };
-		18F8F83B1978A8E100C403D3 /* KD3PowerPlantViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KD3PowerPlantViewController.m; sourceTree = "<group>"; };
 		18F8F891197912C800C403D3 /* KD3CommonTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KD3CommonTools.h; sourceTree = "<group>"; };
 		18F8F892197912C800C403D3 /* KD3CommonTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KD3CommonTools.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -272,8 +272,8 @@
 				18A87A021977C12500BCD647 /* Main.storyboard */,
 				188F572F197E3123006E4947 /* KD3LoginViewController.h */,
 				188F5730197E3123006E4947 /* KD3LoginViewController.m */,
-				18F8F83A1978A8E100C403D3 /* KD3PowerPlantViewController.h */,
-				18F8F83B1978A8E100C403D3 /* KD3PowerPlantViewController.m */,
+				188F8FA81980D89A00B49619 /* KD3PowerPlantViewController.h */,
+				188F8FA91980D89A00B49619 /* KD3PowerPlantViewController.m */,
 				18A87A281977C25A00BCD647 /* KD3PowerUnitViewController.h */,
 				18A87A291977C25A00BCD647 /* KD3PowerUnitViewController.m */,
 				18A87A051977C12500BCD647 /* KD3ControlledCorporationViewController.h */,
@@ -423,11 +423,11 @@
 			files = (
 				18599DD3197CF23000697BAC /* EFloatBox.m in Sources */,
 				1891C144197D51C600118C78 /* TWRChartView.m in Sources */,
-				18F8F83C1978A8E100C403D3 /* KD3PowerPlantViewController.m in Sources */,
 				18599DD6197CF24900697BAC /* EColumnChart.m in Sources */,
 				1891C13E197D514200118C78 /* TWRLineChart.m in Sources */,
 				1891C14D197D525C00118C78 /* TWRCircularChart.m in Sources */,
 				18599DD0197CF23000697BAC /* EColor.m in Sources */,
+				188F8FAA1980D89A00B49619 /* KD3PowerPlantViewController.m in Sources */,
 				1891C153197D527E00118C78 /* TWRDataSet+Strings.m in Sources */,
 				1891C155197D56AE00118C78 /* index.js in Sources */,
 				1891C14A197D524B00118C78 /* TWRBarChart.m in Sources */,

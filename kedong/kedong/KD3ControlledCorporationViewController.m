@@ -23,7 +23,7 @@
 {
     [super viewDidLoad];
 
-    _oneDayChartView = [[TWRChartView alloc] initWithFrame:CGRectMake(0, 64, 300, 200)];
+    _oneDayChartView = [[TWRChartView alloc] initWithFrame:CGRectMake(0, 64, 300, 150)];
     
     _oneDayChartView.backgroundColor = [UIColor clearColor];
     
@@ -32,11 +32,9 @@
     
 
 
-    _oneMonthChartView = [[TWRChartView alloc] initWithFrame:CGRectMake(0, 64, 300, 200)];
+    _oneMonthChartView = [[TWRChartView alloc] initWithFrame:CGRectMake(0, 64, 300, 150)];
     _oneMonthChartView.backgroundColor = [UIColor clearColor];
     [_oneMonthLineChartUIView addSubview:_oneMonthChartView];
-    
-    
     
     
 
@@ -58,8 +56,8 @@
     for(int i=0; i<hourNum; i++)
     {
         [labels1 addObject:[[NSString alloc] initWithFormat:@"%d", i+1]];
-        [data1 addObject:[NSNumber numberWithInt:20 + arc4random()%50]];
-        [data2 addObject:[NSNumber numberWithInt:30 + arc4random()%60]];
+        [data1 addObject:[NSNumber numberWithInt:40 + arc4random()%20]];
+        [data2 addObject:[NSNumber numberWithInt:40 + arc4random()%20]];
         
     }
     NSArray *arr1 = [[NSArray alloc] initWithArray:data1];
