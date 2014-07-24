@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface KD3PowerUnitViewController : UIViewController
+    <UITableViewDataSource, UITableViewDelegate>
 
 @end
