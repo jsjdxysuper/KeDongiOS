@@ -33,6 +33,9 @@
 
 @property (nonatomic, strong) EColumn *eColumnSelected;
 @property (nonatomic, strong) UIColor *tempColor;
+
+@property (strong, nonatomic) NSMutableArray *valuesProgressDif;
+@property  (strong, nonatomic) UILabel *displayValue;
 @end
 
 @implementation KD3PowerPlantViewController
@@ -91,19 +94,23 @@
     
     //Datasource init for progressDiffEColumnChart
     NSArray *plantNames = [[NSArray alloc] initWithObjects:@"丹东", @"大连",@"营口",@"鞍山",@"锦州",@"锦州", @"沈阳", nil];
+    _valuesProgressDif = [[NSMutableArray alloc] initWithCapacity:30];
     NSMutableArray *temp = [NSMutableArray array];
     for (int i = 0; i < 5; i++)
     {
         int value = 10+arc4random() % 100;
         EColumnDataModel *eColumnDataModel = [[EColumnDataModel alloc] initWithLabel:[plantNames objectAtIndex:i] value:value index:i unit:@"MWh"];
         [temp addObject:eColumnDataModel];
+        [_valuesProgressDif addObject:[NSNumber numberWithInteger:value]];
     }
     
     EColumnDataModel *eColumnDataModel = [[EColumnDataModel alloc] initWithLabel:[plantNames objectAtIndex:5] value:20 index:5 unit:@"MWh"];
+    [_valuesProgressDif addObject:[NSNumber numberWithInteger:-20]];
     [temp addObject:eColumnDataModel];
     
     eColumnDataModel = [[EColumnDataModel alloc] initWithLabel:[plantNames objectAtIndex: 6] value:10 index:6 unit:@"MWh"];
     [temp addObject:eColumnDataModel];
+    [_valuesProgressDif addObject:[NSNumber numberWithInteger:-10]];
     
     
     _data = [NSArray arrayWithArray:temp];
@@ -120,13 +127,7 @@
 #pragma mark - Table view data source
 
 
-- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    if(2 ==[indexPath section])
-        return 180;
-    else
-        return 44;
-}
+
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
@@ -165,8 +166,18 @@
     }
     return ret;
 }
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
+{
+    return 30;
+}
 
-
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if(2 ==[indexPath section])
+        return 220;
+    else
+        return 44;
+}
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
@@ -175,7 +186,7 @@
     NSString *identifier = nil;
     NSArray * keysArray;
     
-    
+
     if( 0 == section){
         identifier = @"substractTableCell";
         keysArray = [_plantsSubstractDic allKeys];
@@ -186,6 +197,7 @@
     }else{
         identifier = @"diffProgressTableCell";
         keysArray = [_progressDiffDic allKeys];
+
     }
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier];
@@ -233,16 +245,34 @@
         [progressUIView addSubview:progressView];
         cellLabel6.text = [keysArray objectAtIndex:row];
     }else if(2 == section){
-        UIView *progressDiffUIView = (UILabel *)[cell viewWithTag:8];
-        
+
+
         _eColumnChart =
-        [[EColumnChart alloc] initWithFrame:CGRectMake(40, 10,                                                                              progressDiffUIView.frame.size.width-50,
-                                                       150)];
+        [[EColumnChart alloc] initWithFrame:CGRectMake(40, 50,                                                                              cell.frame.size.width-80,
+                                                       140)];
         //[_eColumnChart setNormalColumnColor:[UIColor purpleColor]];
         [_eColumnChart setColumnsIndexStartFromLeft:YES];
         [_eColumnChart setDelegate:self];
         [_eColumnChart setDataSource:self];
-        [progressDiffUIView addSubview:_eColumnChart];
+        [_eColumnChart setShowHighAndLowColumnWithColor:NO];
+        
+
+        
+//        _displayValue = [[UILabel alloc]initWithFrame:CGRectMake(230, 20, 50, 30)];
+//        _displayValue.tag =1;
+//        
+//        [_eColumnChart addSubview:_displayValue];
+        UILabel *tempLabel1 = (UILabel *)[_eColumnChart viewWithTag:11];
+        tempLabel1.hidden = YES;
+        [tempLabel1 removeFromSuperview];
+        UILabel *tempLabel = [[UILabel alloc]initWithFrame:CGRectMake(230, 20, 50, 30)];
+//        NSInteger tempInt = [[_valuesProgressDif objectAtIndex:eColumn.eColumnDataModel.index] intValue];
+//        tempLabel.text = [[NSString alloc] initWithFormat:@"%ld", tempInt];
+//        
+        [_eColumnChart  addSubview:tempLabel];
+        [cell addSubview:_eColumnChart];
+        
+        
         
     }
     // Configure the cell...
@@ -286,14 +316,10 @@
 
 - (UIColor *)colorForEColumn:(EColumn *)eColumn
 {
-    if (eColumn.eColumnDataModel.index < 3)
-    {
-        return [UIColor purpleColor];
-    }
-    else
-    {
+    if(0 > [[_valuesProgressDif objectAtIndex: eColumn.eColumnDataModel.index] intValue])
         return [UIColor redColor];
-    }
+    else
+        return [UIColor greenColor];
     
 }
 
@@ -313,6 +339,22 @@
     eColumn.barColor = [UIColor blackColor];
     
     //    _valueLabel.text = [NSString stringWithFormat:@"%.1f",eColumn.eColumnDataModel.value];
+
+
+//    [_displayValue removeFromSuperview];
+//    _displayValue = nil;
+
+    UILabel *tempLabel1 = (UILabel *)[_eColumnChart viewWithTag:11];
+    tempLabel1.hidden = YES;
+    [tempLabel1 removeFromSuperview];
+    UILabel *tempLabel = [[UILabel alloc]initWithFrame:CGRectMake(230, 20, 50, 30)];
+    tempLabel.tag = 11;
+    NSInteger tempInt = [[_valuesProgressDif objectAtIndex:eColumn.eColumnDataModel.index] intValue];
+    tempLabel.text = [[NSString alloc] initWithFormat:@"%ld", tempInt];
+
+    [_eColumnChart  addSubview:tempLabel];
+    
+
 }
 
 - (void)eColumnChart:(EColumnChart *)eColumnChart
