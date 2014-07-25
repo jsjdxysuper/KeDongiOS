@@ -510,6 +510,7 @@
                     <tabBarItem key="tabBarItem" title="电厂" image="first" id="pNn-hH-KOV"/>
                     <nil key="simulatedStatusBarMetrics"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics" translucent="NO"/>
+                    <size key="freeformSize" width="320" height="568"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aE9-Jw-YTg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
