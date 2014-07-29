@@ -9,5 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface KD3PowerPlantController : UIViewController
+    <UIWebViewDelegate>
+@property (weak, nonatomic) IBOutlet UIWebView *webView;
 
 @end

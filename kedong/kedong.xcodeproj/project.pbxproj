@@ -13,7 +13,7 @@
 		188F5738197E5C2F006E4947 /* orange-ball.png in Resources */ = {isa = PBXBuildFile; fileRef = 188F5734197E5C2F006E4947 /* orange-ball.png */; };
 		188F5739197E5C2F006E4947 /* red-ball.png in Resources */ = {isa = PBXBuildFile; fileRef = 188F5735197E5C2F006E4947 /* red-ball.png */; };
 		1891C155197D56AE00118C78 /* index.js in Sources */ = {isa = PBXBuildFile; fileRef = 1891C154197D56AE00118C78 /* index.js */; };
-		18940066198644F7005D0FEB /* KD3PowerPlantController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18940065198644F7005D0FEB /* KD3PowerPlantController.m */; };
+		18925CEB198731C8009987E5 /* KD3PowerPlantController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18925CEA198731C8009987E5 /* KD3PowerPlantController.m */; };
 		18A879F11977C12500BCD647 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18A879F01977C12500BCD647 /* Foundation.framework */; };
 		18A879F31977C12500BCD647 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18A879F21977C12500BCD647 /* CoreGraphics.framework */; };
 		18A879F51977C12500BCD647 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18A879F41977C12500BCD647 /* UIKit.framework */; };
@@ -48,8 +48,8 @@
 		188F5734197E5C2F006E4947 /* orange-ball.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "orange-ball.png"; sourceTree = "<group>"; };
 		188F5735197E5C2F006E4947 /* red-ball.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "red-ball.png"; sourceTree = "<group>"; };
 		1891C154197D56AE00118C78 /* index.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = index.js; sourceTree = "<group>"; };
-		18940064198644F7005D0FEB /* KD3PowerPlantController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KD3PowerPlantController.h; sourceTree = "<group>"; };
-		18940065198644F7005D0FEB /* KD3PowerPlantController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KD3PowerPlantController.m; sourceTree = "<group>"; };
+		18925CE9198731C8009987E5 /* KD3PowerPlantController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KD3PowerPlantController.h; sourceTree = "<group>"; };
+		18925CEA198731C8009987E5 /* KD3PowerPlantController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KD3PowerPlantController.m; sourceTree = "<group>"; };
 		18A879ED1977C12500BCD647 /* kedong.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = kedong.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		18A879F01977C12500BCD647 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		18A879F21977C12500BCD647 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -147,8 +147,8 @@
 				18A87A021977C12500BCD647 /* Main.storyboard */,
 				188F572F197E3123006E4947 /* KD3LoginViewController.h */,
 				188F5730197E3123006E4947 /* KD3LoginViewController.m */,
-				18940064198644F7005D0FEB /* KD3PowerPlantController.h */,
-				18940065198644F7005D0FEB /* KD3PowerPlantController.m */,
+				18925CE9198731C8009987E5 /* KD3PowerPlantController.h */,
+				18925CEA198731C8009987E5 /* KD3PowerPlantController.m */,
 				18A87A0B1977C12500BCD647 /* Images.xcassets */,
 				18A879F71977C12500BCD647 /* Supporting Files */,
 			);
@@ -294,7 +294,7 @@
 				18F8F893197912C800C403D3 /* KD3CommonTools.m in Sources */,
 				18A879FD1977C12500BCD647 /* main.m in Sources */,
 				188F5731197E3123006E4947 /* KD3LoginViewController.m in Sources */,
-				18940066198644F7005D0FEB /* KD3PowerPlantController.m in Sources */,
+				18925CEB198731C8009987E5 /* KD3PowerPlantController.m in Sources */,
 				18A87A011977C12500BCD647 /* KD3AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

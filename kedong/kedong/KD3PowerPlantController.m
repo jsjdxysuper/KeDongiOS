@@ -26,8 +26,48 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
+    UIWebView* webView1 = (UIWebView*)[self.view viewWithTag:1];
+    if(nil != webView1){
+        webView1.delegate = self;
+        // Do any additional setup after loading the view.
+        NSURL *url = [NSURL URLWithString:@"http://www.sgepm.com/PlantCloudAtlasAppWebpub/dc.jsp?yhid=13940366736"];
+        NSURLRequest *request = [NSURLRequest requestWithURL:url];
+        [webView1 loadRequest:request];
+        webView1.scalesPageToFit =YES;
+        [self.view addSubview:webView1];
+    }
+
+    UIWebView* webView2 = (UIWebView*)[self.view viewWithTag:2];
+    if(nil != webView2){
+        webView2.delegate = self;
+        // Do any additional setup after loading the view.
+        NSURL *url = [NSURL URLWithString:@"http://www.sgepm.com/PlantCloudAtlasAppWebpub/fgs.jsp?yhid=13940366736"];
+        NSURLRequest *request = [NSURLRequest requestWithURL:url];
+        [webView2 loadRequest:request];
+        webView2.scalesPageToFit =YES;
+        [self.view addSubview:webView2];
+    }
+
+    UIWebView* webView3 = (UIWebView*)[self.view viewWithTag:3];
+    if(nil != webView3){
+        webView3.delegate = self;
+        // Do any additional setup after loading the view.
+        NSURL *url = [NSURL URLWithString:@"http://www.sgepm.com/PlantCloudAtlasAppWebpub/jzzt.jsp?yhid=13940366736"];
+        NSURLRequest *request = [NSURLRequest requestWithURL:url];
+        [webView3 loadRequest:request];
+        webView3.scalesPageToFit =YES;
+        [self.view addSubview:webView3];
+
+    }
+
+    
+    
+    
 }
+
+
+
 
 - (void)didReceiveMemoryWarning
 {
