@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13C64" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="QJe-7x-DvI">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="QJe-7x-DvI">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
@@ -122,13 +122,13 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="yxb-ks-bdN"/>
+                    <tabBarItem key="tabBarItem" title="电厂" image="first" id="yxb-ks-bdN"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SZB-sk-MbF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="650" y="59"/>
         </scene>
-        <!--Power Plant Controller - Item-->
+        <!--Power Plant Controller - 分公司-->
         <scene sceneID="HXr-mh-XFS">
             <objects>
                 <viewController storyboardIdentifier="second" id="PWS-l1-isQ" customClass="KD3PowerPlantController" sceneMemberID="viewController">
@@ -148,13 +148,13 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="X4X-wG-gn4"/>
+                    <tabBarItem key="tabBarItem" title="分公司" image="first" id="X4X-wG-gn4"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8CF-ps-iNt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="586" y="727"/>
         </scene>
-        <!--Power Plant Controller - Item-->
+        <!--Power Plant Controller - 机组-->
         <scene sceneID="iRi-vi-w9F">
             <objects>
                 <viewController id="gWs-Jd-pMm" customClass="KD3PowerPlantController" sceneMemberID="viewController">
@@ -174,13 +174,16 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="o6k-tX-9Qz"/>
+                    <tabBarItem key="tabBarItem" title="机组" image="first" id="o6k-tX-9Qz"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7Ya-W8-1jw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="586" y="-473"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="first" width="30" height="30"/>
+    </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
