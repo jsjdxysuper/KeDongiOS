@@ -7,12 +7,20 @@
 //
 
 #import "KD3LoginViewController.h"
+#import "SSCheckBoxView.h"
+
 
 @interface KD3LoginViewController ()
 
 @end
 
 @implementation KD3LoginViewController
+
+
+- (BOOL)prefersStatusBarHidden
+{
+    return YES;
+}
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -27,6 +35,17 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    [NSThread sleepForTimeInterval:0];
+    
+    SSCheckBoxView * checkBoxA = [[SSCheckBoxView alloc] initWithFrame:CGRectMake(2, 2, 101, 40) style:2 checked:NO];
+    [checkBoxA setText:@"记住密码"];
+    
+    SSCheckBoxView *checkBoxB = [[SSCheckBoxView alloc] initWithFrame:CGRectMake(2, 2, 101, 40) style:2 checked:NO];
+    [checkBoxB setText:@"自动登录"];
+    
+    [self.checkAView addSubview: checkBoxA];
+    [self.checkBView addSubview: checkBoxB];
+    
 }
 
 - (void)didReceiveMemoryWarning

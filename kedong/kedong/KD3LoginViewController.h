@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "SSCheckBoxView.h"
 
 @interface KD3LoginViewController : UIViewController
 @property (weak, nonatomic) IBOutlet UIButton *cancelButton;
@@ -15,4 +16,7 @@
 @property (weak, nonatomic) IBOutlet UITextField *nameTextField;
 @property (weak, nonatomic) IBOutlet UITextField *passwordTextField;
 - (IBAction)textFieldDoneEditing:(id)sender;
+@property (weak, nonatomic) IBOutlet UIView *checkAView;
+@property (weak, nonatomic) IBOutlet UIView *checkBView;
+
 @end
