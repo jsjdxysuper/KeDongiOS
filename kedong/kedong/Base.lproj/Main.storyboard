@@ -118,7 +118,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="Vex-rW-GRa">
             <objects>
-                <tabBarController id="8YX-ce-x5E" sceneMemberID="viewController">
+                <tabBarController id="8YX-ce-x5E" customClass="KD3TabBarController" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="Etg-u0-zYH"/>
                     <nil key="simulatedStatusBarMetrics"/>
                     <nil key="simulatedBottomBarMetrics"/>
@@ -273,10 +273,10 @@
             </objects>
             <point key="canvasLocation" x="1703" y="-642"/>
         </scene>
-        <!--View Controller-->
+        <!--User Info View Controller-->
         <scene sceneID="uff-wJ-8r4">
             <objects>
-                <viewController storyboardIdentifier="userInfoScene" id="FYV-nM-K1r" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="userInfoScene" id="FYV-nM-K1r" customClass="KD3UserInfoViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="n3r-OX-8rY"/>
                         <viewControllerLayoutGuide type="bottom" id="Izp-gE-jsy"/>
@@ -455,10 +455,10 @@
             </objects>
             <point key="canvasLocation" x="2190" y="-625"/>
         </scene>
-        <!--View Controller-->
+        <!--App Info View Controller-->
         <scene sceneID="jVe-Y6-vGb">
             <objects>
-                <viewController storyboardIdentifier="applicationScene" id="bHM-5A-E7X" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="applicationScene" id="bHM-5A-E7X" customClass="KD3AppInfoViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Bwe-Ou-EWe"/>
                         <viewControllerLayoutGuide type="bottom" id="Cmc-bE-lmK"/>

@@ -107,6 +107,7 @@
     UIStoryboard *mainStoryboard = [UIStoryboard  storyboardWithName:@"Main" bundle:nil];
     UIViewController *settingViewController = [mainStoryboard instantiateViewControllerWithIdentifier:@"settingScene"];
 
+    settingViewController.hidesBottomBarWhenPushed = YES;
 
         [self.navigationController pushViewController:settingViewController animated:YES];
     
@@ -137,6 +138,8 @@
     [super viewDidDisappear:animated ];
     
 }
+
+
 /*
 #pragma mark - Navigation
 
