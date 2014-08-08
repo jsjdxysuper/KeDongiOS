@@ -1,21 +1,18 @@
 //
-//  KD3LoginViewController.m
+//  KD3UserSecretViewController.m
 //  kedong
 //
-//  Created by apple on 14-7-22.
+//  Created by apple on 14-8-8.
 //  Copyright (c) 2014年 apple. All rights reserved.
 //
 
-#import "KD3LoginViewController.h"
-#import "SSCheckBoxView.h"
+#import "KD3UserSecretViewController.h"
 
-
-@interface KD3LoginViewController ()
+@interface KD3UserSecretViewController ()
 
 @end
 
-@implementation KD3LoginViewController
-
+@implementation KD3UserSecretViewController
 
 - (BOOL)prefersStatusBarHidden
 {
@@ -34,19 +31,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
     // Do any additional setup after loading the view.
-    [NSThread sleepForTimeInterval:0];
-    
-    SSCheckBoxView * checkBoxA = [[SSCheckBoxView alloc] initWithFrame:CGRectMake(2, 2, 101, 40) style:2 checked:NO];
-    [checkBoxA setText:@"记住密码"];
-    
-    SSCheckBoxView *checkBoxB = [[SSCheckBoxView alloc] initWithFrame:CGRectMake(2, 2, 101, 40) style:2 checked:NO];
-    [checkBoxB setText:@"自动登录"];
-    
-    [self.checkAView addSubview: checkBoxA];
-    [self.checkBView addSubview: checkBoxB];
-    
 }
 
 - (void)didReceiveMemoryWarning
@@ -66,7 +51,18 @@
 }
 */
 
-- (IBAction)textFieldDoneEditing:(id)sender {
-    [sender resignFirstResponder];
+- (IBAction)OKButton:(id)sender {
+    if([self.nSecret.text isEqualToString:@""] || [self.oSecret.text isEqualToString:@""] || [self.confirm.text isEqualToString:@""])
+    {
+        UIAlertView *alert=[[UIAlertView alloc] initWithTitle:@"Warning" message:@"密码不能为空" delegate:self cancelButtonTitle:@"确定" otherButtonTitles:nil];
+        alert.alertViewStyle=UIAlertViewStyleDefault;
+        [alert show];
+    }
+    if(![self.nSecret.text isEqualToString:self.confirm.text])
+    {
+        UIAlertView *alert=[[UIAlertView alloc] initWithTitle:@"Warning" message:@"两次输入的密码不一致" delegate:self cancelButtonTitle:@"确定" otherButtonTitles:nil];
+        alert.alertViewStyle=UIAlertViewStyleDefault;
+        [alert show];
+    }
 }
 @end
