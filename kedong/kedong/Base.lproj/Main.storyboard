@@ -24,7 +24,7 @@
                                 </items>
                             </navigationBar>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="smw-eh-he5">
-                                <rect key="frame" x="30" y="172" width="260" height="281"/>
+                                <rect key="frame" x="30" y="101" width="260" height="281"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" horizontalHuggingPriority="252" verticalHuggingPriority="252" translatesAutoresizingMaskIntoConstraints="NO" id="7Pn-kZ-EAC">
@@ -56,7 +56,7 @@
                                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
                                                 <connections>
-                                                    <segue destination="8YX-ce-x5E" kind="modal" id="OyL-XN-UkP"/>
+                                                    <action selector="loginButtondown:" destination="QJe-7x-DvI" eventType="touchUpInside" id="AfS-kT-shT"/>
                                                 </connections>
                                             </button>
                                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zh2-x7-y95">
@@ -98,7 +98,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="centerY" secondItem="smw-eh-he5" secondAttribute="centerY" constant="-28.5" id="34X-R0-eyh"/>
+                            <constraint firstAttribute="centerY" secondItem="smw-eh-he5" secondAttribute="centerY" constant="42.5" id="34X-R0-eyh"/>
                             <constraint firstItem="0Lh-UA-xys" firstAttribute="leading" secondItem="kiT-x1-rpe" secondAttribute="leading" id="PXV-sF-eis"/>
                             <constraint firstAttribute="centerX" secondItem="smw-eh-he5" secondAttribute="centerX" id="fAe-YR-vvI"/>
                             <constraint firstAttribute="trailing" secondItem="0Lh-UA-xys" secondAttribute="trailing" id="n48-KJ-UEe"/>
@@ -109,16 +109,19 @@
                     <connections>
                         <outlet property="checkAView" destination="zh2-x7-y95" id="SfO-6h-jW6"/>
                         <outlet property="checkBView" destination="6UK-4c-z6m" id="ppM-bw-pZS"/>
+                        <outlet property="nameTextField" destination="TR6-JQ-tu0" id="RWO-Qr-Icf"/>
+                        <outlet property="passwordTextField" destination="tRJ-ee-iPQ" id="tRx-nT-VKc"/>
+                        <segue destination="8YX-ce-x5E" kind="modal" identifier="login2Tab" id="VLE-KI-lTr"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Djc-YY-p8V" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-255" y="180"/>
+            <point key="canvasLocation" x="-281" y="194"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="Vex-rW-GRa">
             <objects>
-                <tabBarController id="8YX-ce-x5E" customClass="KD3TabBarController" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="tabControllerScene" id="8YX-ce-x5E" customClass="KD3TabBarController" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="Etg-u0-zYH"/>
                     <nil key="simulatedStatusBarMetrics"/>
                     <nil key="simulatedBottomBarMetrics"/>

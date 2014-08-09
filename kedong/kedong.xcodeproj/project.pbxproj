@@ -73,6 +73,7 @@
 		18923A3E198F860B006BAB7C /* launch.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = launch.png; sourceTree = "<group>"; };
 		18925CE9198731C8009987E5 /* KD3PowerPlantController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KD3PowerPlantController.h; sourceTree = "<group>"; };
 		18925CEA198731C8009987E5 /* KD3PowerPlantController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KD3PowerPlantController.m; sourceTree = "<group>"; };
+		1892902C1995E3E50056CEAC /* project.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = project.h; sourceTree = "<group>"; };
 		1893E5711993B2B6009B2A98 /* bg.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bg.jpg; sourceTree = "<group>"; };
 		1893EB1C198F7FFC0098F0C7 /* icon_29x29@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_29x29@2x.png"; sourceTree = "<group>"; };
 		1893EB1D198F7FFC0098F0C7 /* icon_40x40@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_40x40@2x.png"; sourceTree = "<group>"; };
@@ -210,6 +211,7 @@
 				182601BA19947B0A008BC8E3 /* KD3UserInfoViewController.m */,
 				188F572F197E3123006E4947 /* KD3LoginViewController.h */,
 				188F5730197E3123006E4947 /* KD3LoginViewController.m */,
+				1892902C1995E3E50056CEAC /* project.h */,
 				18925CE9198731C8009987E5 /* KD3PowerPlantController.h */,
 				18925CEA198731C8009987E5 /* KD3PowerPlantController.m */,
 				186C1D9A19936E6E0041A586 /* KD3SettingViewController.h */,

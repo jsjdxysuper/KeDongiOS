@@ -19,4 +19,6 @@
 @property (weak, nonatomic) IBOutlet UIView *checkAView;
 @property (weak, nonatomic) IBOutlet UIView *checkBView;
 
+- (IBAction)loginButtondown:(id)sender;
+
 @end

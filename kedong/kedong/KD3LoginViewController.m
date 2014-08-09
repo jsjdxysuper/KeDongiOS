@@ -8,7 +8,7 @@
 
 #import "KD3LoginViewController.h"
 #import "SSCheckBoxView.h"
-
+#import "project.h"
 
 @interface KD3LoginViewController ()
 
@@ -68,5 +68,30 @@
 
 - (IBAction)textFieldDoneEditing:(id)sender {
     [sender resignFirstResponder];
+}
+
+- (IBAction)loginButtondown:(id)sender{
+    NSString *strUrl = [[NSString alloc] initWithFormat:@"http://www.sgepm.com/PlantCloudAtlasAppWebpub/LoginServlet?userid=%@&password=%@",self.nameTextField.text, self.passwordTextField.text];
+    NSURL *url = [NSURL URLWithString:strUrl];
+    
+    NSURLRequest *request = [[NSURLRequest alloc] initWithURL:url];
+    NSData *data = [NSURLConnection sendSynchronousRequest:request returningResponse:nil error:nil];
+    
+    NSString *ret = [[NSString alloc ] initWithData:data encoding:NSUTF8StringEncoding];
+    if ([ret isEqualToString:@"1"]) {
+        [self performSegueWithIdentifier:@"login2Tab" sender:self];
+    }
+    else if([ret isEqualToString:@"0"])
+    {
+        UIAlertView *alert=[[UIAlertView alloc] initWithTitle:@"Warning" message:@"用户名或密码不正确,请重新输入" delegate:self cancelButtonTitle:@"确定" otherButtonTitles:nil];
+        alert.alertViewStyle=UIAlertViewStyleDefault;
+        [alert show];
+    }
+#ifdef DEBUG
+    NSLog(@"%@",self.nameTextField.text);
+    NSLog(@"%@",self.passwordTextField.text);
+    NSLog(@"%@",strUrl);
+    NSLog(@"ret = %@", ret);
+#endif
 }
 @end
