@@ -17,6 +17,9 @@
 		1892198E198FB573008041D9 /* launch_r4.png in Resources */ = {isa = PBXBuildFile; fileRef = 1892198D198FB573008041D9 /* launch_r4.png */; };
 		18923A3F198F860B006BAB7C /* launch.png in Resources */ = {isa = PBXBuildFile; fileRef = 18923A3E198F860B006BAB7C /* launch.png */; };
 		18925CEB198731C8009987E5 /* KD3PowerPlantController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18925CEA198731C8009987E5 /* KD3PowerPlantController.m */; };
+		1892902E19961D3D0056CEAC /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1892902D19961D3D0056CEAC /* Security.framework */; };
+		18929037199757320056CEAC /* SFHFKeychainUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 18929036199757320056CEAC /* SFHFKeychainUtils.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		1892903B19977F1D0056CEAC /* ACPButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 1892903A19977F1D0056CEAC /* ACPButton.m */; };
 		1893E5721993B2B6009B2A98 /* bg.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1893E5711993B2B6009B2A98 /* bg.jpg */; };
 		1893EB1F198F7FFC0098F0C7 /* icon_29x29@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1893EB1C198F7FFC0098F0C7 /* icon_29x29@2x.png */; };
 		1893EB20198F7FFC0098F0C7 /* icon_40x40@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1893EB1D198F7FFC0098F0C7 /* icon_40x40@2x.png */; };
@@ -74,6 +77,11 @@
 		18925CE9198731C8009987E5 /* KD3PowerPlantController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KD3PowerPlantController.h; sourceTree = "<group>"; };
 		18925CEA198731C8009987E5 /* KD3PowerPlantController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KD3PowerPlantController.m; sourceTree = "<group>"; };
 		1892902C1995E3E50056CEAC /* project.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = project.h; sourceTree = "<group>"; };
+		1892902D19961D3D0056CEAC /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		18929035199757320056CEAC /* SFHFKeychainUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFHFKeychainUtils.h; sourceTree = "<group>"; };
+		18929036199757320056CEAC /* SFHFKeychainUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFHFKeychainUtils.m; sourceTree = "<group>"; };
+		1892903919977F1D0056CEAC /* ACPButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ACPButton.h; sourceTree = "<group>"; };
+		1892903A19977F1D0056CEAC /* ACPButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ACPButton.m; sourceTree = "<group>"; };
 		1893E5711993B2B6009B2A98 /* bg.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bg.jpg; sourceTree = "<group>"; };
 		1893EB1C198F7FFC0098F0C7 /* icon_29x29@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_29x29@2x.png"; sourceTree = "<group>"; };
 		1893EB1D198F7FFC0098F0C7 /* icon_40x40@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_40x40@2x.png"; sourceTree = "<group>"; };
@@ -114,6 +122,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1892902E19961D3D0056CEAC /* Security.framework in Frameworks */,
 				18A879F31977C12500BCD647 /* CoreGraphics.framework in Frameworks */,
 				18A879F51977C12500BCD647 /* UIKit.framework in Frameworks */,
 				18A879F11977C12500BCD647 /* Foundation.framework in Frameworks */,
@@ -146,6 +155,33 @@
 				1894E4A51991B7580051A268 /* cloudy2.png */,
 			);
 			name = images;
+			sourceTree = "<group>";
+		};
+		1892903819975E050056CEAC /* keychain */ = {
+			isa = PBXGroup;
+			children = (
+				18929035199757320056CEAC /* SFHFKeychainUtils.h */,
+				18929036199757320056CEAC /* SFHFKeychainUtils.m */,
+			);
+			name = keychain;
+			sourceTree = "<group>";
+		};
+		1892903C19977F200056CEAC /* ACPButtons */ = {
+			isa = PBXGroup;
+			children = (
+				1892903919977F1D0056CEAC /* ACPButton.h */,
+				1892903A19977F1D0056CEAC /* ACPButton.m */,
+			);
+			name = ACPButtons;
+			sourceTree = "<group>";
+		};
+		1892903D1997816E0056CEAC /* SSCheckBoxView */ = {
+			isa = PBXGroup;
+			children = (
+				1894E4B31991D1C20051A268 /* SSCheckBoxView.h */,
+				1894E4B41991D1C20051A268 /* SSCheckBoxView.m */,
+			);
+			name = SSCheckBoxView;
 			sourceTree = "<group>";
 		};
 		1894E4B91991FC650051A268 /* graphs */ = {
@@ -181,6 +217,7 @@
 		18A879EF1977C12500BCD647 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				1892902D19961D3D0056CEAC /* Security.framework */,
 				18A879F01977C12500BCD647 /* Foundation.framework */,
 				18A879F21977C12500BCD647 /* CoreGraphics.framework */,
 				18A879F41977C12500BCD647 /* UIKit.framework */,
@@ -192,12 +229,13 @@
 		18A879F61977C12500BCD647 /* kedong */ = {
 			isa = PBXGroup;
 			children = (
+				1892903D1997816E0056CEAC /* SSCheckBoxView */,
+				1892903C19977F200056CEAC /* ACPButtons */,
+				1892903819975E050056CEAC /* keychain */,
+				188F573A197E5C3A006E4947 /* images */,
 				1894E4B91991FC650051A268 /* graphs */,
 				1894E4B61991D2180051A268 /* UIHelpers.h */,
 				1894E4B71991D2180051A268 /* UIHelpers.m */,
-				1894E4B31991D1C20051A268 /* SSCheckBoxView.h */,
-				1894E4B41991D1C20051A268 /* SSCheckBoxView.m */,
-				188F573A197E5C3A006E4947 /* images */,
 				18F8F891197912C800C403D3 /* KD3CommonTools.h */,
 				18F8F892197912C800C403D3 /* KD3CommonTools.m */,
 				18A879FF1977C12500BCD647 /* KD3AppDelegate.h */,
@@ -370,6 +408,7 @@
 				1891C155197D56AE00118C78 /* index.js in Sources */,
 				18F8F893197912C800C403D3 /* KD3CommonTools.m in Sources */,
 				182601B81994591A008BC8E3 /* KD3UserSecretViewController.m in Sources */,
+				1892903B19977F1D0056CEAC /* ACPButton.m in Sources */,
 				18A879FD1977C12500BCD647 /* main.m in Sources */,
 				1894E4B51991D1C20051A268 /* SSCheckBoxView.m in Sources */,
 				182601BB19947B0A008BC8E3 /* KD3UserInfoViewController.m in Sources */,
@@ -377,6 +416,7 @@
 				182601BE19947B73008BC8E3 /* KD3AppInfoViewController.m in Sources */,
 				186C1D9C19936E6E0041A586 /* KD3SettingViewController.m in Sources */,
 				182601C119948779008BC8E3 /* KD3TabBarController.m in Sources */,
+				18929037199757320056CEAC /* SFHFKeychainUtils.m in Sources */,
 				18925CEB198731C8009987E5 /* KD3PowerPlantController.m in Sources */,
 				18A87A011977C12500BCD647 /* KD3AppDelegate.m in Sources */,
 				1894E4B81991D2180051A268 /* UIHelpers.m in Sources */,

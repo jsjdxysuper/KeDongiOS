@@ -7,8 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ACPButton.h"
 
 @interface KD3SettingViewController : UIViewController
     <UITableViewDataSource, UITableViewDelegate>
+- (IBAction)logoutButtonDown:(id)sender;
 
+@property (weak, nonatomic) IBOutlet ACPButton *logoutButton;
 @end

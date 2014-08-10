@@ -8,6 +8,12 @@
 
 #import <UIKit/UIKit.h>
 #import "SSCheckBoxView.h"
+#import "project.h"
+
+#define CHECKED @"1"
+#define UNCKECKED @"0"
+
+
 
 @interface KD3LoginViewController : UIViewController
 @property (weak, nonatomic) IBOutlet UIButton *cancelButton;
@@ -20,5 +26,11 @@
 @property (weak, nonatomic) IBOutlet UIView *checkBView;
 
 - (IBAction)loginButtondown:(id)sender;
+
+@property (strong,nonatomic)SSCheckBoxView *checkBoxRemPass;
+@property (strong,nonatomic)SSCheckBoxView *checkBoxAutoLogin;
+@property (nonatomic)BOOL remPassCheck;
+@property (nonatomic)BOOL autoLoginCheck;
+
 
 @end

@@ -7,6 +7,8 @@
 //
 
 #import "KD3SettingViewController.h"
+#import "KD3LoginViewController.h"
+#import "SFHFKeychainUtils.h"
 
 @interface KD3SettingViewController ()
 
@@ -35,6 +37,10 @@
 
     self.listData = [[NSMutableArray alloc] initWithObjects:@"用户信息",@"修改密码",@"应用信息", nil];
     
+    [self.logoutButton setStyleType:ACPButtonOK];
+    [self.logoutButton setLabelTextColor:[UIColor whiteColor] highlightedColor:[UIColor redColor] disableColor:nil];
+    [self.logoutButton setLabelFont:[UIFont fontWithName:@"Trebuchet MS" size:20]];
+    [self.logoutButton setStyle:[UIColor redColor]  andBottomColor:[UIColor orangeColor]];
 
 }
 
@@ -95,13 +101,18 @@
     UIStoryboard *mainStoryboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
     UIViewController *nextScene;
     
-    if(2 == row)
+    if(2 == row){
         nextScene = [mainStoryboard instantiateViewControllerWithIdentifier:@"applicationScene"];
-    
-    else if(1 == row)
+        nextScene.title = @"应用信息";
+    }
+    else if(1 == row){
         nextScene = [mainStoryboard instantiateViewControllerWithIdentifier:@"userSecret"];
-    else if(0 == row)
+        nextScene.title = @"修改密码";
+    }
+    else if(0 == row){
         nextScene = [mainStoryboard instantiateViewControllerWithIdentifier:@"userInfoScene"];
+        nextScene.title = @"用户信息";
+    }
     
     [self.navigationController pushViewController:nextScene animated:YES];
 
@@ -126,4 +137,9 @@
 }
 */
 
+- (IBAction)logoutButtonDown:(id)sender {
+    [self performSegueWithIdentifier:@"return2Login" sender:self];
+    
+    [SFHFKeychainUtils storeUsername:AUTO_LONGIN_CHECK andPassword:UNCKECKED forServiceName:SERVICENAME updateExisting:YES error:nil];
+}
 @end
