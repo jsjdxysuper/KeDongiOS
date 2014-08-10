@@ -67,21 +67,54 @@
 
     }
     
-    UIBarButtonItem *rightBtn = [[UIBarButtonItem alloc]
-                                 initWithTitle:@"设置"
-                                 style:UIBarButtonItemStylePlain
-                                 target:self                                 
-                                 action:@selector(backView:)];
+//    UIBarButtonItem *rightBtn = [[UIBarButtonItem alloc]
+//                                 initWithTitle:@"设置"
+//                                 style:UIBarButtonItemStylePlain
+//                                 target:self                                 
+//                                 action:@selector(backView:)];
+    UIImage* backImage1 = [UIImage imageNamed:@"set.png"];
     
-    [self.navigationItem setRightBarButtonItem:rightBtn];
+    CGRect backframe1 = CGRectMake(0,0,40,50);
     
-    UIBarButtonItem *leftBtn = [[UIBarButtonItem alloc]
-                                 initWithTitle:@"刷新"
-                                 style:UIBarButtonItemStylePlain
-                                 target:self
-                                action:@selector(refreshData:)];
+    UIButton* backButton1= [[UIButton alloc] initWithFrame:backframe1];
     
-    [self.navigationItem setLeftBarButtonItem:leftBtn];
+    [backButton1 setBackgroundImage:backImage1 forState:UIControlStateNormal];
+    
+    [backButton1 setTitle:@"" forState:UIControlStateNormal];
+    
+    backButton1.titleLabel.font=[UIFont systemFontOfSize:20];
+    
+    [backButton1 addTarget:self action:@selector(backView:) forControlEvents:UIControlEventTouchUpInside];
+    
+    
+    
+    UIBarButtonItem* rightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:backButton1];
+//    [self.navigationItem setRightBarButtonItem:rightBarButtonItem];
+    
+//    UIBarButtonItem *leftBtn = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"refresh.png"] landscapeImagePhone:[UIImage imageNamed:@"refresh.png"] style:UIBarButtonItemStylePlain target:self action:@selector(refreshData:)];
+
+    UIImage* backImage = [UIImage imageNamed:@"refresh.png"];
+    
+    CGRect backframe = CGRectMake(0,0,40,50);
+    
+    UIButton* backButton= [[UIButton alloc] initWithFrame:backframe];
+    
+    [backButton setBackgroundImage:backImage forState:UIControlStateNormal];
+    
+    [backButton setTitle:@"" forState:UIControlStateNormal];
+    
+    backButton.titleLabel.font=[UIFont systemFontOfSize:20];
+    
+    [backButton addTarget:self action:@selector(refreshData:) forControlEvents:UIControlEventTouchUpInside];
+    
+    
+    
+    UIBarButtonItem* leftBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:backButton];
+    
+//    [self.navigationItem setLeftBarButtonItem:leftBarButtonItem];
+
+    
+    [self.navigationItem setRightBarButtonItems:[NSArray arrayWithObjects: leftBarButtonItem,rightBarButtonItem,nil]];
     self.navigationItem.title = @"电厂云图";
     
     
