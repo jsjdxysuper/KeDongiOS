@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="QJe-7x-DvI">
     <dependencies>
+        <deployment defaultVersion="1536" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
     <scenes>
@@ -37,7 +38,7 @@
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                                 <connections>
-                                                    <action selector="textFieldDoneEditing:" destination="QJe-7x-DvI" eventType="editingDidEndOnExit" id="Tvj-0O-sAV"/>
+                                                    <action selector="textFieldDoneEditing:" destination="QJe-7x-DvI" eventType="editingDidEndOnExit" id="cmF-hm-OwC"/>
                                                 </connections>
                                             </textField>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="口令" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tRJ-ee-iPQ">
@@ -473,25 +474,35 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="cloudy2.png" translatesAutoresizingMaskIntoConstraints="NO" id="6Ga-Fq-Hkd">
-                                <rect key="frame" x="56" y="190" width="209" height="134"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cloudy2.png" translatesAutoresizingMaskIntoConstraints="NO" id="6Ga-Fq-Hkd">
+                                <rect key="frame" x="56" y="217" width="209" height="134"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="209" id="7pg-K1-JAQ"/>
+                                    <constraint firstAttribute="height" constant="134" id="M0J-Mh-SWT"/>
+                                </constraints>
                             </imageView>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="电厂云图" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sh9-wv-AWi">
-                                <rect key="frame" x="154" y="332" width="77" height="21"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="电厂云图" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sh9-wv-AWi">
+                                <rect key="frame" x="154" y="364" width="77" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="iOS   V1.0.0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qoL-Wr-PG2">
-                                <rect key="frame" x="154" y="361" width="111" height="21"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="iOS   V1.0.0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qoL-Wr-PG2">
+                                <rect key="frame" x="154" y="393" width="111" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="6Ga-Fq-Hkd" secondAttribute="centerX" id="F5A-Qi-bgM"/>
+                            <constraint firstAttribute="centerY" secondItem="6Ga-Fq-Hkd" secondAttribute="centerY" id="ceK-pZ-XxM"/>
+                            <constraint firstItem="sh9-wv-AWi" firstAttribute="top" secondItem="6Ga-Fq-Hkd" secondAttribute="bottom" constant="13" id="puD-iQ-R2w"/>
+                            <constraint firstItem="qoL-Wr-PG2" firstAttribute="top" secondItem="sh9-wv-AWi" secondAttribute="bottom" constant="8" id="qdH-Af-uxv"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="eSK-hZ-6Xc"/>
                 </viewController>
@@ -531,11 +542,11 @@
             </objects>
             <point key="canvasLocation" x="1176" y="767"/>
         </scene>
-        <!--Navigation Controller - 分公司-->
+        <!--Navigation Controller - 总览-->
         <scene sceneID="w6v-b8-Lex">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Wsg-dR-10E" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="分公司" image="first" id="3as-AT-i2d"/>
+                    <tabBarItem key="tabBarItem" title="总览" image="first" id="3as-AT-i2d"/>
                     <toolbarItems/>
                     <nil key="simulatedStatusBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="wH0-4B-gZH">
@@ -551,11 +562,11 @@
             </objects>
             <point key="canvasLocation" x="680" y="-618"/>
         </scene>
-        <!--Navigation Controller - 电厂-->
+        <!--Navigation Controller - 详细-->
         <scene sceneID="Nv5-YK-7vI">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="fLt-hu-5rE" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="电厂" image="first" id="yxb-ks-bdN"/>
+                    <tabBarItem key="tabBarItem" title="详细" image="first" id="yxb-ks-bdN"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="cto-lQ-b3b">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -570,11 +581,11 @@
             </objects>
             <point key="canvasLocation" x="650" y="59"/>
         </scene>
-        <!--Navigation Controller - 机组-->
+        <!--Navigation Controller - 统计-->
         <scene sceneID="C9U-p5-czL">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="dUy-6v-yco" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="机组" image="first" id="o6k-tX-9Qz"/>
+                    <tabBarItem key="tabBarItem" title="统计" image="first" id="o6k-tX-9Qz"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="FHI-FD-eUt">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>

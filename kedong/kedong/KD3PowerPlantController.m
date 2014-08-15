@@ -37,7 +37,7 @@
     if(nil != self.webView1){
         self.webView1.delegate = self;
         // Do any additional setup after loading the view.
-        self.url1 = [NSURL URLWithString:@"http://www.sgepm.com/PlantCloudAtlasAppWebpub/dc.jsp?yhid=13940366736"];
+        self.url1 = [NSURL URLWithString:@"http://www.sgepm.com/PlantCloudAtlasAppWebpub/fdxx.jsp?yhid=13940366736"];
         NSURLRequest *request = [NSURLRequest requestWithURL:self.url1];
         [self.webView1 loadRequest:request];
         self.webView1.scalesPageToFit =YES;
@@ -48,7 +48,7 @@
     if(nil != self.webView2){
         self.webView2.delegate = self;
         // Do any additional setup after loading the view.
-        self.url2 = [NSURL URLWithString:@"http://www.sgepm.com/PlantCloudAtlasAppWebpub/fgs.jsp?yhid=13940366736"];
+        self.url2 = [NSURL URLWithString:@"http://www.sgepm.com/PlantCloudAtlasAppWebpub/fdzl.jsp?yhid=13940366736"];
         NSURLRequest *request = [NSURLRequest requestWithURL:self.url2];
         [self.webView2 loadRequest:request];
         self.webView2.scalesPageToFit =YES;
@@ -59,7 +59,7 @@
     if(nil != self.webView3){
         self.webView3.delegate = self;
         // Do any additional setup after loading the view.
-        self.url3 = [NSURL URLWithString:@"http://www.sgepm.com/PlantCloudAtlasAppWebpub/jzzt.jsp?yhid=13940366736"];
+        self.url3 = [NSURL URLWithString:@"http://www.sgepm.com/PlantCloudAtlasAppWebpub/fdtj.jsp?yhid=13940366736"];
         NSURLRequest *request = [NSURLRequest requestWithURL:self.url3];
         [self.webView3 loadRequest:request];
         self.webView3.scalesPageToFit =YES;
