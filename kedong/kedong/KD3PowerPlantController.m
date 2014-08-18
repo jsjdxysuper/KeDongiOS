@@ -74,7 +74,7 @@
 //                                 action:@selector(backView:)];
     UIImage* backImage1 = [UIImage imageNamed:@"set.png"];
     
-    CGRect backframe1 = CGRectMake(0,0,40,50);
+    CGRect backframe1 = CGRectMake(0,0,50,60);
     
     UIButton* backButton1= [[UIButton alloc] initWithFrame:backframe1];
     
@@ -91,11 +91,11 @@
     UIBarButtonItem* rightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:backButton1];
 //    [self.navigationItem setRightBarButtonItem:rightBarButtonItem];
     
-//    UIBarButtonItem *leftBtn = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"refresh.png"] landscapeImagePhone:[UIImage imageNamed:@"refresh.png"] style:UIBarButtonItemStylePlain target:self action:@selector(refreshData:)];
+
 
     UIImage* backImage = [UIImage imageNamed:@"refresh.png"];
     
-    CGRect backframe = CGRectMake(0,0,40,50);
+    CGRect backframe = CGRectMake(0,0,50,60);
     
     UIButton* backButton= [[UIButton alloc] initWithFrame:backframe];
     
@@ -105,14 +105,32 @@
     
     backButton.titleLabel.font=[UIFont systemFontOfSize:20];
     
+    
     [backButton addTarget:self action:@selector(refreshData:) forControlEvents:UIControlEventTouchUpInside];
     
     
     
     UIBarButtonItem* leftBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:backButton];
     
-//    [self.navigationItem setLeftBarButtonItem:leftBarButtonItem];
+    
+    //左侧的图片按钮
+    UIImage* leftImage = [UIImage imageNamed:@"ti.png"];
+    
+    CGRect leftframe = CGRectMake(0,0,30,30);
+    
+    UIButton* leftButton= [[UIButton alloc] initWithFrame:leftframe];
+    
+    [leftButton setBackgroundImage:leftImage forState:UIControlStateNormal];
+    
+    [leftButton setTitle:@"" forState:UIControlStateNormal];
+    
+    leftButton.titleLabel.font=[UIFont systemFontOfSize:20];
+    
+    [leftButton addTarget:self action:nil forControlEvents:UIControlEventTouchUpInside];
+        UIBarButtonItem *leftBtn = [[UIBarButtonItem alloc] initWithCustomView:leftButton];
 
+    [leftButton setUserInteractionEnabled:NO];
+    [self.navigationItem setLeftBarButtonItem:leftBtn];
     
     [self.navigationItem setRightBarButtonItems:[NSArray arrayWithObjects: leftBarButtonItem,rightBarButtonItem,nil]];
     self.navigationItem.title = @"电厂云图";
