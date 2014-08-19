@@ -581,11 +581,11 @@
             </objects>
             <point key="canvasLocation" x="650" y="59"/>
         </scene>
-        <!--Navigation Controller - 统计-->
+        <!--Navigation Controller - 分析-->
         <scene sceneID="C9U-p5-czL">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="dUy-6v-yco" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="统计" image="first" id="o6k-tX-9Qz"/>
+                    <tabBarItem key="tabBarItem" title="分析" image="first" id="o6k-tX-9Qz"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="FHI-FD-eUt">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
