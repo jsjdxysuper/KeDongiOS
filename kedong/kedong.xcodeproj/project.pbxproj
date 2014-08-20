@@ -65,6 +65,9 @@
 		18A87A151977C12500BCD647 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18A879F41977C12500BCD647 /* UIKit.framework */; };
 		18A87A1D1977C12500BCD647 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 18A87A1B1977C12500BCD647 /* InfoPlist.strings */; };
 		18A87A1F1977C12500BCD647 /* kedongTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A87A1E1977C12500BCD647 /* kedongTests.m */; };
+		18F35D5419A4900E0003D3AA /* analysis.png in Resources */ = {isa = PBXBuildFile; fileRef = 18F35D5119A4900E0003D3AA /* analysis.png */; };
+		18F35D5619A4900E0003D3AA /* overview.png in Resources */ = {isa = PBXBuildFile; fileRef = 18F35D5319A4900E0003D3AA /* overview.png */; };
+		18F35D5819A490760003D3AA /* detail1.png in Resources */ = {isa = PBXBuildFile; fileRef = 18F35D5719A490760003D3AA /* detail1.png */; };
 		18F8F893197912C800C403D3 /* KD3CommonTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 18F8F892197912C800C403D3 /* KD3CommonTools.m */; };
 /* End PBXBuildFile section */
 
@@ -153,6 +156,9 @@
 		18A87A1A1977C12500BCD647 /* kedongTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "kedongTests-Info.plist"; sourceTree = "<group>"; };
 		18A87A1C1977C12500BCD647 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		18A87A1E1977C12500BCD647 /* kedongTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = kedongTests.m; sourceTree = "<group>"; };
+		18F35D5119A4900E0003D3AA /* analysis.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = analysis.png; sourceTree = "<group>"; };
+		18F35D5319A4900E0003D3AA /* overview.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = overview.png; sourceTree = "<group>"; };
+		18F35D5719A490760003D3AA /* detail1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = detail1.png; sourceTree = "<group>"; };
 		18F8F891197912C800C403D3 /* KD3CommonTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KD3CommonTools.h; sourceTree = "<group>"; };
 		18F8F892197912C800C403D3 /* KD3CommonTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KD3CommonTools.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -185,6 +191,9 @@
 		188F573A197E5C3A006E4947 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				18F35D5119A4900E0003D3AA /* analysis.png */,
+				18F35D5719A490760003D3AA /* detail1.png */,
+				18F35D5319A4900E0003D3AA /* overview.png */,
 				1893E5711993B2B6009B2A98 /* bg.jpg */,
 				188B0D2719A1989C00F18892 /* ti.png */,
 				188B0D2919A198D000F18892 /* ti copy.png */,
@@ -435,6 +444,7 @@
 				188B0D2619A1984400F18892 /* ti@2x.png in Resources */,
 				1892783F19985A6B00163325 /* cb_mono_off@2x.png in Resources */,
 				1893EB21198F7FFC0098F0C7 /* icon_60x60@2x.png in Resources */,
+				18F35D5419A4900E0003D3AA /* analysis.png in Resources */,
 				1892783219985A6B00163325 /* cb_dark_off.png in Resources */,
 				18A87A0C1977C12500BCD647 /* Images.xcassets in Resources */,
 				1892783D19985A6B00163325 /* cb_green_on@2x.png in Resources */,
@@ -449,6 +459,7 @@
 				1892783119985A6B00163325 /* cb_box_on@2x.png in Resources */,
 				1892783C19985A6B00163325 /* cb_green_on.png in Resources */,
 				1892B2031997B7BE0086D32A /* set.png in Resources */,
+				18F35D5619A4900E0003D3AA /* overview.png in Resources */,
 				188B0D2819A1989C00F18892 /* ti.png in Resources */,
 				1892783B19985A6B00163325 /* cb_green_off@2x.png in Resources */,
 				1892783619985A6B00163325 /* cb_glossy_off.png in Resources */,
@@ -465,6 +476,7 @@
 				1892784119985A6B00163325 /* cb_mono_on@2x.png in Resources */,
 				1892783819985A6B00163325 /* cb_glossy_on.png in Resources */,
 				1894E4A61991B7580051A268 /* cloudy2.png in Resources */,
+				18F35D5819A490760003D3AA /* detail1.png in Resources */,
 				18A87A041977C12500BCD647 /* Main.storyboard in Resources */,
 				1892782F19985A6B00163325 /* cb_box_off@2x.png in Resources */,
 			);

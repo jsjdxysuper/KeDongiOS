@@ -546,7 +546,7 @@
         <scene sceneID="w6v-b8-Lex">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Wsg-dR-10E" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="总览" image="first" id="3as-AT-i2d"/>
+                    <tabBarItem key="tabBarItem" title="总览" image="overview.png" id="3as-AT-i2d"/>
                     <toolbarItems/>
                     <nil key="simulatedStatusBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="wH0-4B-gZH">
@@ -566,7 +566,7 @@
         <scene sceneID="Nv5-YK-7vI">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="fLt-hu-5rE" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="详细" image="first" id="yxb-ks-bdN"/>
+                    <tabBarItem key="tabBarItem" title="详细" image="detail1.png" id="yxb-ks-bdN"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="cto-lQ-b3b">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -585,7 +585,7 @@
         <scene sceneID="C9U-p5-czL">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="dUy-6v-yco" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="分析" image="first" id="o6k-tX-9Qz"/>
+                    <tabBarItem key="tabBarItem" title="分析" image="analysis.png" id="o6k-tX-9Qz"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="FHI-FD-eUt">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -602,8 +602,10 @@
         </scene>
     </scenes>
     <resources>
+        <image name="analysis.png" width="24" height="24"/>
         <image name="cloudy2.png" width="320" height="180"/>
-        <image name="first" width="30" height="30"/>
+        <image name="detail1.png" width="24" height="24"/>
+        <image name="overview.png" width="24" height="24"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>

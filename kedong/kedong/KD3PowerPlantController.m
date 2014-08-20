@@ -137,6 +137,7 @@
     
     
 //    self.hidesBottomBarWhenPushed = NO;
+
     
 }
 
