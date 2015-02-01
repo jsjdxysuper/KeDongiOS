@@ -9,5 +9,9 @@
 #import <UIKit/UIKit.h>
 
 @interface KD3UserInfoViewController : UIViewController
+@property (weak, nonatomic) IBOutlet UILabel *userName;
+@property (weak, nonatomic) IBOutlet UILabel *userGroup;
+@property (weak, nonatomic) IBOutlet UILabel *userCompany;
+@property (weak, nonatomic) IBOutlet UILabel *userPlant;
 
 @end
