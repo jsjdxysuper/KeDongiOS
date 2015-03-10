@@ -19,5 +19,5 @@
 @property (strong, nonatomic)NSURL *url3;
 - (IBAction)backView:(id)sender;
 
-- (void)setTabBarHidden:(BOOL)hidden;
+//- (void)setTabBarHidden:(BOOL)hidden;
 @end
