@@ -47,11 +47,13 @@
 
     
     // Do any additional setup after loading the view.
-   // [self.view setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"login.jpg"]]];
+   [self.view setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"login.jpg"]]];
     [NSThread sleepForTimeInterval:0];
     
     self.checkBoxRemPass = [[SSCheckBoxView alloc] initWithFrame:CGRectMake(2, 2, 101, 40) style:2 checked:NO];
     [self.checkBoxRemPass setText:@"记住密码"];
+    //[self.checkBoxRemPass setBackgroundColor:[UIColor whiteColor]];
+    //[self.checkBoxRemPass ];
     
     self.checkBoxAutoLogin = [[SSCheckBoxView alloc] initWithFrame:CGRectMake(2, 2, 101, 40) style:2 checked:NO];
     [self.checkBoxAutoLogin setText:@"自动登录"];
