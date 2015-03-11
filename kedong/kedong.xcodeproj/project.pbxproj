@@ -11,6 +11,7 @@
 		1810B5111AAEE1D900C4FCFA /* desktop－40@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1810B50F1AAEE1D900C4FCFA /* desktop－40@2x.png */; };
 		1810B5121AAEE1D900C4FCFA /* desktop－60@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1810B5101AAEE1D900C4FCFA /* desktop－60@2x.png */; };
 		1810B5201AAEE80E00C4FCFA /* launch.png in Resources */ = {isa = PBXBuildFile; fileRef = 1810B51E1AAEE80E00C4FCFA /* launch.png */; };
+		181986791AAFD14600EFF872 /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = 181986781AAFD14600EFF872 /* background.png */; };
 		182601B81994591A008BC8E3 /* KD3UserSecretViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 182601B71994591A008BC8E3 /* KD3UserSecretViewController.m */; };
 		182601BB19947B0A008BC8E3 /* KD3UserInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 182601BA19947B0A008BC8E3 /* KD3UserInfoViewController.m */; };
 		182601BE19947B73008BC8E3 /* KD3AppInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 182601BD19947B73008BC8E3 /* KD3AppInfoViewController.m */; };
@@ -91,6 +92,7 @@
 		1810B50F1AAEE1D900C4FCFA /* desktop－40@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "desktop－40@2x.png"; sourceTree = "<group>"; };
 		1810B5101AAEE1D900C4FCFA /* desktop－60@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "desktop－60@2x.png"; sourceTree = "<group>"; };
 		1810B51E1AAEE80E00C4FCFA /* launch.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = launch.png; sourceTree = "<group>"; };
+		181986781AAFD14600EFF872 /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = "<group>"; };
 		182601B61994591A008BC8E3 /* KD3UserSecretViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KD3UserSecretViewController.h; sourceTree = "<group>"; };
 		182601B71994591A008BC8E3 /* KD3UserSecretViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KD3UserSecretViewController.m; sourceTree = "<group>"; };
 		182601B919947B0A008BC8E3 /* KD3UserInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KD3UserInfoViewController.h; sourceTree = "<group>"; };
@@ -201,6 +203,7 @@
 		188F573A197E5C3A006E4947 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				181986781AAFD14600EFF872 /* background.png */,
 				1849A7CC1AAF31F4001F17B3 /* holeGrid.png */,
 				1849A7CE1AAF3218001F17B3 /* plant.png */,
 				1849A7CA1AAF3154001F17B3 /* generator.png */,
@@ -465,6 +468,7 @@
 				1849A7CD1AAF31F4001F17B3 /* holeGrid.png in Resources */,
 				1892783D19985A6B00163325 /* cb_green_on@2x.png in Resources */,
 				18A879FB1977C12500BCD647 /* InfoPlist.strings in Resources */,
+				181986791AAFD14600EFF872 /* background.png in Resources */,
 				1810B5111AAEE1D900C4FCFA /* desktop－40@2x.png in Resources */,
 				1892783E19985A6B00163325 /* cb_mono_off.png in Resources */,
 				1892783519985A6B00163325 /* cb_dark_on@2x.png in Resources */,

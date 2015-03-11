@@ -39,7 +39,20 @@
     }
     return self;
 }
-
+//图片缩放到指定尺寸大小
+- (UIImage *)scaleToSize:(UIImage *)img size:(CGSize)size{
+    // 创建一个bitmap的context
+    // 并把它设置成为当前正在使用的context
+    UIGraphicsBeginImageContext(size);
+    // 绘制改变大小的图片
+    [img drawInRect:CGRectMake(0, 0, size.width, size.height)];
+    // 从当前context中创建一个改变大小后的图片
+    UIImage* scaledImage = UIGraphicsGetImageFromCurrentImageContext();
+    // 使当前的context出堆栈
+    UIGraphicsEndImageContext();
+    // 返回新的改变大小后的图片
+    return scaledImage;
+}
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -47,7 +60,15 @@
 
     
     // Do any additional setup after loading the view.
-   [self.view setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"login.jpg"]]];
+
+//    UIImageView *imageView = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"background.png"]];
+//    imageView.frame = CGRectMake(0, 0, 320, 480);
+//    [self.view addSubview:imageView];
+    CGRect rect =[self.view frame];
+    UIImage *image = [UIImage imageNamed:@"background.png"];
+    UIImage *imageUse = [self scaleToSize:image size:rect.size];
+    NSLog(@"高度：%f，宽度：%f",rect.size.height,rect.size.width);
+   [self.view setBackgroundColor:[UIColor colorWithPatternImage:imageUse]];
     [NSThread sleepForTimeInterval:0];
     
     self.checkBoxRemPass = [[SSCheckBoxView alloc] initWithFrame:CGRectMake(2, 2, 101, 40) style:2 checked:NO];
