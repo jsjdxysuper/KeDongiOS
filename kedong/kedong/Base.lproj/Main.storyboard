@@ -17,18 +17,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0Lh-UA-xys">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                <items>
-                                    <navigationItem title="电厂云图" id="Bzn-1F-0BI"/>
-                                </items>
-                            </navigationBar>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="smw-eh-he5">
-                                <rect key="frame" x="30" y="101" width="260" height="281"/>
+                                <rect key="frame" x="30" y="59" width="260" height="281"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" horizontalHuggingPriority="252" verticalHuggingPriority="252" translatesAutoresizingMaskIntoConstraints="NO" id="7Pn-kZ-EAC">
+                                    <view contentMode="scaleToFill" horizontalHuggingPriority="252" verticalHuggingPriority="252" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7Pn-kZ-EAC">
                                         <rect key="frame" x="5" y="121" width="250" height="140"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <subviews>
@@ -97,20 +90,15 @@
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="centerX" secondItem="7Pn-kZ-EAC" secondAttribute="centerX" id="SK8-Zy-p8H"/>
-                                    <constraint firstAttribute="height" constant="281" id="ZNE-qa-fPr"/>
-                                    <constraint firstAttribute="bottom" secondItem="7Pn-kZ-EAC" secondAttribute="bottom" constant="20" id="dhg-3I-2wo"/>
-                                    <constraint firstAttribute="width" constant="260" id="fpG-Vu-pgZ"/>
+                                    <constraint firstAttribute="width" constant="260" id="Myv-fH-4GR"/>
+                                    <constraint firstAttribute="height" constant="281" id="iEM-Hk-5Fu"/>
                                 </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="centerY" secondItem="smw-eh-he5" secondAttribute="centerY" constant="42.5" id="34X-R0-eyh"/>
-                            <constraint firstItem="0Lh-UA-xys" firstAttribute="leading" secondItem="kiT-x1-rpe" secondAttribute="leading" id="PXV-sF-eis"/>
-                            <constraint firstAttribute="centerX" secondItem="smw-eh-he5" secondAttribute="centerX" id="fAe-YR-vvI"/>
-                            <constraint firstAttribute="trailing" secondItem="0Lh-UA-xys" secondAttribute="trailing" id="n48-KJ-UEe"/>
-                            <constraint firstItem="0Lh-UA-xys" firstAttribute="top" secondItem="kiT-x1-rpe" secondAttribute="top" id="qwo-Le-n6X"/>
+                            <constraint firstAttribute="centerX" secondItem="smw-eh-he5" secondAttribute="centerX" id="0Zw-Lt-uEf"/>
+                            <constraint firstItem="smw-eh-he5" firstAttribute="top" secondItem="kiT-x1-rpe" secondAttribute="top" constant="59" id="WDe-Tb-vfJ"/>
                         </constraints>
                     </view>
                     <nil key="simulatedStatusBarMetrics"/>
