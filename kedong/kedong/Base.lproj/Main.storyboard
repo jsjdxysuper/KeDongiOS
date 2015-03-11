@@ -80,23 +80,27 @@
                                             <constraint firstAttribute="height" constant="140" id="ECR-UE-Euz"/>
                                         </constraints>
                                     </view>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="249" image="cloudy2.png" translatesAutoresizingMaskIntoConstraints="NO" id="5Ef-nI-zt7">
-                                        <rect key="frame" x="38" y="13" width="184" height="108"/>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="电厂云图" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ec6-xi-kqy">
+                                        <rect key="frame" x="61" y="47" width="138" height="39"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="108" id="bJ1-zm-aeg"/>
-                                            <constraint firstAttribute="width" constant="184" id="gJz-m2-U27"/>
-                                        </constraints>
-                                    </imageView>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="PlantCloudAtlas" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GlA-kW-nET">
+                                        <rect key="frame" x="66" y="88" width="131" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="centerX" secondItem="5Ef-nI-zt7" secondAttribute="centerX" id="HBs-NY-LKs"/>
                                     <constraint firstAttribute="centerX" secondItem="7Pn-kZ-EAC" secondAttribute="centerX" id="SK8-Zy-p8H"/>
                                     <constraint firstAttribute="height" constant="281" id="ZNE-qa-fPr"/>
                                     <constraint firstAttribute="bottom" secondItem="7Pn-kZ-EAC" secondAttribute="bottom" constant="20" id="dhg-3I-2wo"/>
                                     <constraint firstAttribute="width" constant="260" id="fpG-Vu-pgZ"/>
-                                    <constraint firstItem="5Ef-nI-zt7" firstAttribute="top" secondItem="smw-eh-he5" secondAttribute="top" constant="13" id="xeP-Kf-fN5"/>
                                 </constraints>
                             </view>
                         </subviews>
