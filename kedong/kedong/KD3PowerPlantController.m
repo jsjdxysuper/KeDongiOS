@@ -74,7 +74,7 @@
 //                                 action:@selector(backView:)];
     UIImage* backImage1 = [UIImage imageNamed:@"set.png"];
     
-    CGRect backframe1 = CGRectMake(0,0,50,60);
+    CGRect backframe1 = CGRectMake(0,0,25,25);
     
     UIButton* backButton1= [[UIButton alloc] initWithFrame:backframe1];
     
@@ -95,7 +95,7 @@
 
     UIImage* backImage = [UIImage imageNamed:@"refresh.png"];
     
-    CGRect backframe = CGRectMake(0,0,50,60);
+    CGRect backframe = CGRectMake(0,0,25,25);
     
     UIButton* backButton= [[UIButton alloc] initWithFrame:backframe];
     

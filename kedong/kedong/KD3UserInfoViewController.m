@@ -7,6 +7,8 @@
 //
 
 #import "KD3UserInfoViewController.h"
+#import "SFHFKeychainUtils.h"
+#import "project.h"
 
 @interface KD3UserInfoViewController ()
 
@@ -32,7 +34,26 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    NSString *userName =[SFHFKeychainUtils getPasswordForUsername:USERNAME_KEY andServiceName:SERVICENAME error:nil];
+    
     // Do any additional setup after loading the view.
+    NSString *strUrl = [[NSString alloc] initWithFormat:@"http://www.sgepm.com/PlantCloudAtlasAppWebpub/UserinfoServlet?yhid=%@",userName];
+    NSURL *url = [NSURL URLWithString:strUrl];
+    
+    NSURLRequest *request = [[NSURLRequest alloc] initWithURL:url];
+    NSData *data = [NSURLConnection sendSynchronousRequest:request returningResponse:nil error:nil];
+    
+    NSString *ret = [[NSString alloc ] initWithData:data encoding:NSUTF8StringEncoding];
+    NSLog(@"%@",ret);
+    
+    NSArray *strArray = [ret componentsSeparatedByString:@","];
+
+    NSLog(@"%@",[strArray objectAtIndex:0]);
+    self.userName.text = [strArray objectAtIndex:0];
+    self.userGroup.text = [strArray objectAtIndex:1];
+    self.userCompany.text = [strArray objectAtIndex:2];
+    self.userPlant.text = [strArray objectAtIndex:3];
 }
 
 - (void)didReceiveMemoryWarning
